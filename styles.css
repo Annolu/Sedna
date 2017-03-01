@@ -1,0 +1,48 @@
+/*//////////////STYLES//////////////*/
+/*
+
+pink #FF5274 :hover #D7405D
+
+header border bottom rgba(255, 255, 255, 0.2);
+
+Font "Open Sans", sans-serif
+
+body colour and fixed menu background colour rgba(28, 54, 83, 0.6)
+
+white section Hs #3D4351
+
+white section p tag rgba(28, 54, 83, 0.6)
+
+lille section background #F3F4F8
+
+footer background colours:
+
+up #495061
+
+bottom #3D4351
+
+right #373D4A
+
+arrow square rgba(0, 0, 0, 0.15) :hover rgba(0, 0, 0, 0.4)
+
+*/
+
+body{
+    background-color: white;
+    color: white;
+    font: "Open Sans", sans-serif;
+}
+
+.header-section{
+    background-image: url(img/hero.jpg);
+}
+
+.nav-main-container{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-main-container .nav-bar li{
+    text-decoration-style: none;
+    float: left;
+    display: inline
+}
