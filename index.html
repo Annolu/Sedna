@@ -7,37 +7,117 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="style-fonts.css">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <section class="header-section">
             <div class="container">
                 <nav class="nav-main-container">
-                    <ul class="nav-bar">
-                        <li>Features</li>
-                        <li>Assets</li>
-                        <li>Blog</li>
-                        <li>Download</li>
-                    </ul>
-                    <div class="navbar-left">
-                        <buttons class="buttons log-in">Log-in</buttons>
-                        <buttons class="buttons sign-up">Sign up</buttons>
-                    </div>
-                </nav>
-                <div class="banner-section">
-                    <div class="banner-wrapper">
-                        <h1>Design, collaborate, win!</h1>
-                        <p>Introducing “Sedna”. A responsive one page website, designed & developed exclusively for Codrops.</p>
-                        <div class="buttons-wrapper">
-                            <button class="buttons left">Download</button>
-                            <button class="buttons left">Learn more</button>
+                    <div class="row align-items-center">
+                        <div class="logo col-md-1">
+                            <img src="img/sedna-logo.png">
                         </div>
+                        <div class="nav-bar col-md-8">
+                            <ul>
+                                <li class="py-5 px-3">Features</li>
+                                <li class="py-5 px-3">Assets</li>
+                                <li class="py-5 px-3">Blog</li>
+                                <li class="py-5 px-3">Download</li>
+                            </ul>
+                        </div>    
+                        <div class="navbar-right d-inline-flex col-md-3 py-5">
+                            <buttons class="buttons log-in py-2 px-3">Log-in</buttons>
+                            <buttons class="buttons sign-up py-2 px-4">Sign up</buttons>
+                        </div>
+                    </div>    
+                </nav>
+                <div class="dark-section align-items-center">
+                    <div class="row">
+                        <div class="banner-wrapper text-center col-md-12">
+                            <h1>Design, collaborate, win!</h1>
+                            <p>Introducing “Sedna”. A responsive one page website, designed & developed exclusively for Codrops.</p>
+                            <div class="buttons-wrapper">
+                                <button class="buttons left py-2 px-4 reversed">Download</button>
+                                <button class="buttons right py-2 px-4">Learn more</button>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <section class="white-section">
+            <div class="container">
+                <div class="articles">
+                    <div class="row align-items-center">
+                        <div class="single article col-md-4">
+                            <div class="article-icon"><span class="icon-tools"></span></div>   
+                            <div class="article-content">
+                                <h4>Easily customable</h4>
+                                <p>Easily customise Sedna to suit your start up, portfolio or product. Take advantage of the layered Sketch file and bring your product to life.</p>
+                            </div>
+                        </div>
+                        <div class="single article col-md-4">
+                            <div class="article-icon"><span class="icon-lightbulb"></span></div>
+                            <div class="article-content">
+                                <h4>Moder design</h4>
+                                <p>Designed with modern trends and techniques in mind, Sedna will help your product stand out in an already saturated market.</p>
+                            </div>
+                        </div>
+                        <div class="single article col-md-4">
+                            <div class="article-icon"><span class="icon-genius"></span></div>
+                            <div class="article-content">
+                                <h4>Responsive development</h4>
+                                <p>Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.</p>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
         </section>
-        <script src="script.js">
+        <section class="violet-section">
+            <div class="container">
+                <div class="row">
+                    <div class="ipadimg-container col-md-7">
+                        <img src="img/ipad-device.png">
+                        <img src="img/iphone6.png">
+                    </div>    
+                    <div class="recycle col-md-5">
+                        <h3>Sedna will drive your product forward</h3>
+                        <p>Present your product, start up, or portfolio in a beautifully modern way. Turn your visitors in to clients.</p>
+                        <div class="articles-list">
+                            <ul>
+                                <div class="article-icon"><span class="icon-recycle"></span></div>
+                                <div class="article-content">
+                                    <li>
+                                        <h4>universal & responsive</h4>
+                                        <p>Sedna is universal and will look smashing on any device.</p>
+                                    </li>
+                                </div>
+                                <div class="article-icon"><span class="icon-profile-male"></span></div>
+                                <div class="article-content">
+                                    <li>
+                                        <h4>user centric design</h4>
+                                        <p>Sedna takes advantage of common design patterns, allowing for a seamless experience for users of all levels.</p>
+                                    </li>
+                                </div>
+                                <div class="article-icon"><span class="icon-beaker"></span></div>
+                                <div class="article-content">
+                                    
+                                    <li>
+                                        <h4>clean reusable code</h4>
+                                        <p>Download and re-use the Sedna open source code for any other project you like.</p>
+                                    </li>
+                                </div>    
+                            </ul>
+                        </div>
+                             
+                        
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <script src="script.js"></script>
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
