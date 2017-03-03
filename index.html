@@ -8,6 +8,10 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="style-fonts.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <!--Add the new slick-theme.css if you want the default styling-->
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script src="https://use.fontawesome.com/8253c6c8c6.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -18,12 +22,12 @@
                         <div class="logo col-md-1">
                             <img src="img/sedna-logo.png">
                         </div>
-                        <div class="nav-bar col-md-8">
-                            <ul>
-                                <li class="py-5 px-3">Features</li>
-                                <li class="py-5 px-3">Assets</li>
-                                <li class="py-5 px-3">Blog</li>
-                                <li class="py-5 px-3">Download</li>
+                        <div class="col-md-8">
+                            <ul class="nav">
+                                <li class="py-5 px-3"><a href="#">Features</a></li>
+                                <li class="py-5 px-3"><a href="#">Assets</a></li>
+                                <li class="py-5 px-3"><a href="#">Blog</a></li>
+                                <li class="py-5 px-3"><a href="#">Download</a></li>
                             </ul>
                         </div>    
                         <div class="navbar-right d-inline-flex col-md-3 py-5">
@@ -137,20 +141,131 @@
             </div>
         </section>
         <section class="dark-section two">
-            <div class=" align-items-center">
+            <div class="align-items-center">
                 <div class="row">
                     <div class="banner-wrapper text-center col-md-12">
-                        <h5>Customise Sedna with the included Sketch 3 file</h5>
+                        <h2>Customise Sedna with the included Sketch <i class="version">3</i> file</h2>
                         <p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
                         <button class="buttons py-2 px-4">download now!</button>
                     </div>
                 </div>
             </div>    
         </section>
-        <script src="script.js"></script>
+        <section class="violet-section two">
+            <div class="container">
+                <h3>Showcase your smashing product with Sedna</h3>
+                <div class="row">
+                    <div class="single-article col-md-6">
+                        <h4>Exclusive to Codrops</h4>
+                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="single-article col-md-6">
+                        <h4>Spreading pixels around the world</h4>
+                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="blog-item col-lg-4 text-center">
+                        <img class="img-fluid" src="img/blog-img-01.jpg">
+                        <h6>Product</h6>
+                        <p>Getting started with Sedna</p>
+                    </div>
+                    <div class="blog-item col-lg-4 text-center">
+                        <img class="img-fluid" src="img/blog-img-02.jpg">
+                        <h6>Technology</h6>
+                        <p>Why IE8 support is deminishing</p>
+                    </div>
+                    <div class="blog-item col-lg-4 text-center">
+                        <img class="img-fluid" src="img/blog-img-03.jpg">
+                        <h6>Product</h6>
+                        <p>Sedna tutorial: How to begin your</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="buttons right py-2 px-4">More news</button>
+                </div>
+            </div>
+        </section>
+        <section class="dark-section three">
+            <div class="container">
+                <div class="slider text-center">
+                    <div class="single-slide">
+                        <img src="img/avatar.jpg">
+                        <h2><i>"Lorem ipsum dolor sit amet, nullam lucia nisi."</i></h2>
+                        <p>PETER FINLAN, PRODUCT DESIGNER.</p>
+                    </div>
+                    <div class="single-slide">
+                        <img src="img/mani.jpg">
+                        <h2><i>"Nunc vel maximus purus. Nullam ac urna ornare."</i></h2>
+                        <p>MANOELA ILIC, FOUNDER @ CODROPS.</p>
+                    </div>
+                    <div class="single-slide">
+                        <img src="img/130.jpg">
+                        <h2><i>"Nullam ac urna ornare, ultrices nisl ut, lacinia nisi."</i></h2>
+                        <p>BLAZ ROBAR, PIXEL GURU.</p>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        <section class="white-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="content-column col-md-5 text-center">
+                        <h3>Get started with Sedna, absolutely free</h3>
+                        <p>Grab your copy today, exclusively from Codrops</p>
+                        <div class="form">
+                            <form>
+                                <i class="fa fa-envelope" aria-hidden="true"></i><input type="email" placeholder="Enter your email"s/>
+                                <i class="fa fa-lock" aria-hidden="true"></i><input type="password" placeholder="Enter your password"/>
+                                <button class="buttons reversed" type="submit">Sign up for free</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer-section">
+                <div class="top-strip">
+                    <div class="container d-flex justify-content-end">
+                        <div class="arrow-box">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="nav-block col-lg-7">
+                            
+                                    <ul class="nav">
+                                        <li class="py-5 mr-3"><a href="#">Features</a></li>
+                                        <li class="py-5 mx-3"><a href="#">Pricing</a></li>
+                                        <li class="py-5 mx-3"><a href="#">Sign up</a></li>
+                                        <li class="py-5 mx-3"><a href="#">License</a></li>
+                                        <li class="py-5 mx-3"><a href="#">Contact</a></li>
+                                        <li class="py-5 mx-3"><a href="#">Codrops</a></li>
+                                    </ul>
+                                <p>Copyright © 2015 <a href="#">Sedna</a></p>
+                                <p><a href="#">Licensed </a>| Crafted with love for <a href="#">Codrops</a></p>
+                            </div>
+                            <div class="social-block">
+                                <div class="social">
+                                    <p>share sedna with your friends</p>
+                                    <a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+        </section>
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
