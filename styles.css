@@ -58,6 +58,7 @@ a{
     cursor: pointer;
 }
 
+
 a:hover{
     color: #FF5274;
     text-decoration: none;
@@ -271,7 +272,6 @@ h2{
     background-image: url(img/testimonials-bg.jpg);
 }
 
-
 .dark-section.three .single-slide p{
     color: white!important;
 }
@@ -282,7 +282,7 @@ h2{
 .dark-section.three .single-slide img{
     display: inline;
     border-radius: 50%;
-    width: 70px;
+    width: 85px;
     border: 2px solid white;
     margin-bottom: 30px;
 }
@@ -290,32 +290,77 @@ h2{
 .arrow{
     background-color: inherit;
     border: none;
-    width: 60px;
+    width: 45px;
     position: absolute;
     background-color: transparent;
     cursor: pointer;
-    transition: all 200ms ease;
-    top: 100px;
-    opacity: .7;
+    transition: all 400ms ease;
+    top: 120px;
+    opacity: 0;
 }
 
+.dark-section.three .slider:hover .arrow.arrow-next:hover{
+    opacity: 1;
+}
+
+.dark-section.three .slider:hover .arrow.arrow-prev:hover{
+    opacity: 1;
+}
 
 .arrow:focus{
     outline: none;
 }
 
 .arrow.arrow-next{
-    right: 50px;
+    right: -50px;
 }
 
 .arrow.arrow-prev{
-    left: 50px;
+    left: -50px;
     z-index: 2;
+}
+
+.dark-section.three .slider:hover > .arrow.arrow-next{
+    right: 0;
+    opacity: .7;
+}
+
+.dark-section.three .slider:hover > .arrow.arrow-prev{
+    left: 0;
+    opacity: .7;
+}
+
+.slick-dots{
+    bottom: -100px;
+}
+
+.slick-dots li button{
+    cursor: default;
+}
+
+.slick-dots li button:before{
+    width: 13px;
+    height: 13px;
+    border-radius: 20px;
+    color: transparent;
+    background-color: rgba(92, 95, 106, 1);
+    transition: all 200ms ease-in-out;
+}
+
+.slick-dots li:not(.slick-active) button:hover::before{
+    background-color: white;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active button:before{
+    color: transparent;
+    border: 2px solid white;
+    background-color:transparent;
 }
 
 .form input{
     display: block;
-    padding: 10px 10px 10px 50px;
+    padding: 10px 10px 10px 80px;
     margin: 20px;
     border: solid 1px #E6E9EA;
     width: 95%;
@@ -324,29 +369,38 @@ h2{
 
 .form input::-webkit-input-placeholder{
     color: rgba(28, 54, 83, 0.6);
-    border-left: solid 1px #E6E9EA;
-    padding-left: 20px;
+    /*padding-left: 40px;*/
     font-size: 15px;
 }
+/*
+.form input:focus::-webkit-input-placeholder{
+    color:transparent;
+}*/
 
 .form{
     position: relative;
+}
+
+.white-section .content-column>p{
+    padding-bottom: 15px;
 }
 
 .form i{
     color: #FF5274;
     position: absolute;
     left: 40px;
+    border-right: solid 1px #E6E9EA;
+    padding-right: 20px;
 }
 
 .form .fa-envelope{
-    top: 17px;
+    top: 13px;
     font-size: 14px;
 }
 
 .form .fa-lock{
     top: 80px;
-    font-size: 17px;    
+    font-size: 18px;    
 }
 
 .form .buttons.reversed{
@@ -355,6 +409,8 @@ h2{
     padding: 10px;
     margin: 0;
 }
+
+
 
 /*//FOOTER SECTION//*/
 .footer{
@@ -384,7 +440,7 @@ h2{
     top: 10px;
 }
 
-.footer-section .row{
+.footer-section .back-layer{
     background-color: #3D4351;
 }
 
@@ -394,8 +450,24 @@ h2{
 }
 
 .footer-section .nav-block{
-
     padding: 70px 0;
+}
+
+.nav-block .fa-heart{
+    color: #FF5274;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(0.8)
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .footer-section .social-block{
@@ -446,8 +518,16 @@ h2{
     background-color: #1AB4EF;
 }
 
+.social-block .social .twitter:hover{
+    background-color: #1590BF;
+}
+
 .social-block .social .facebook{
     background-color: #3B5898;
+}
+
+.social-block .social .facebook:hover{
+    background-color: #324C85;
 }
 
 .social-block .social i{

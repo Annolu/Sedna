@@ -4,6 +4,7 @@ $(document).ready(function(){
        infinite: true,
        speed: 300,
        slidesToShow: 1,
+       cssEase: 'ease',
        adaptiveHeight: true,
        nextArrow: '<button type="button" class="arrow arrow-next"><img src="img/next.svg"></button>',
        prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/back.svg"></button>'
