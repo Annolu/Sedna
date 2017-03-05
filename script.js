@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $('.slider').slick({
        dots: true,
        infinite: true,
@@ -10,23 +11,29 @@ $(document).ready(function(){
        prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/back.svg"></button>'
     });
     
-    //positions at which it shows/hides the fixed top-menu
     
-        $(window).scroll(function() {  
+    $(window).scroll(function() {  
+        
+        //show/hide fixed top-menu
 
         let distanceFromTop= $(this).scrollTop();
         
-        switch(true){
-            case (distanceFromTop<1):
-                $('.nav-main-container').removeClass('top-menu-down');            
-                break;   
-            case (distanceFromTop>1):
-                $('.nav-main-container').addClass('top-menu-down');
-                break;
+        if(distanceFromTop>1){
+            $('.nav-main-container').addClass('top-menu-down');
+        }else{
+            $('.nav-main-container').removeClass('top-menu-down');
         }
             
+        //smooth scroll to top when click on footer box-arrow
             
+        $('.arrow-box').on('click',function (e) {
+            e.preventDefault();
             
+            $('body').animate({
+                'scrollTop': 1,
+                behavior: 'smooth'
+            }, 1200, 'swing');
+        })
     })
 });
    

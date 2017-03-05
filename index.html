@@ -127,7 +127,7 @@
                 </div>
             </div>    
         </section>
-        <section class="white-section">
+        <section class="white-section two">
             <div class="container">
                 <div class="row">
                     <div class="content-column col-md-5">
@@ -148,6 +148,9 @@
                     <h2>Customise Sedna with the included Sketch <i class="version">3</i> file</h2>
                     <p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
                     <a href="#" class="buttons">download now!</a>
+                    <div class="diamond-wrapper">
+                        <img src="img/sketch-logo.png">
+                    </div>
                 </div>
             </div>    
         </section>
@@ -168,19 +171,61 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="blog-item col-lg-4 text-center">
-                        <img class="img-fluid" src="img/blog-img-01.jpg">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img class="img-fluid" src="img/blog-img-01.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articleimg-wrapper" data-toggle="modal" data-target="#myModalOne">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <img class="img-fluid" src="img/blog-img-01.jpg">
+                        </div>
                         <h6>Product</h6>
-                        <p>Getting started with Sedna</p>
+                        <p>Getting started with Sedna<i class="fa fa-angle-right" aria-hidden="true"></i></p>
                     </div>
                     <div class="blog-item col-lg-4 text-center">
-                        <img class="img-fluid" src="img/blog-img-02.jpg">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img class="img-fluid" src="img/blog-img-02.jpg">
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="articleimg-wrapper" data-toggle="modal" data-target="#myModalTwo">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <img class="img-fluid" src="img/blog-img-02.jpg">
+                        </div>    
                         <h6>Technology</h6>
-                        <p>Why IE8 support is deminishing</p>
+                        <p>Why IE8 support is deminishing<i class="fa fa-angle-right" aria-hidden="true"></i></p>
                     </div>
                     <div class="blog-item col-lg-4 text-center">
-                        <img class="img-fluid" src="img/blog-img-03.jpg">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalThree" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img class="img-fluid" src="img/blog-img-03.jpg">
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="articleimg-wrapper" data-toggle="modal" data-target="#myModalThree">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <img class="img-fluid" src="img/blog-img-03.jpg">
+                        </div>    
                         <h6>Product</h6>
-                        <p>Sedna tutorial: How to begin your</p>
+                        <p>Sedna tutorial: How to begin your<i class="fa fa-angle-right" aria-hidden="true"></i></p>
                     </div>
                 </div>
                 <div class="text-center">
@@ -229,7 +274,7 @@
         <section class="footer-section">
                 <div class="top-strip">
                     <div class="container d-flex justify-content-end">
-                        <div class="arrow-box">
+                        <div href="#topMenu" class="arrow-box">
                             <i class="fa fa-angle-up" aria-hidden="true"></i>
                         </div>
                     </div>    

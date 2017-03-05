@@ -62,7 +62,7 @@ body{
 }
 
 .nav-main-container.top-menu-down .nav li{
-    padding: 40px 20px;
+    padding: 35px 20px;
 }
 
 a{
@@ -85,7 +85,6 @@ a:focus{
 
 .buttons{
     border: 2px solid #FF5274;
-    margin: 15px;
     color: #FF5274;
     transition: all 200ms ease-in-out;
     cursor: pointer;
@@ -93,7 +92,9 @@ a:focus{
     background: inherit;
     text-transform: uppercase;
     font-size: 13px;
-    padding: 15px 40px;
+    padding: 8px 40px;    
+    position: relative;
+    top: 30px;
 }
 
 .buttons:hover{
@@ -111,7 +112,7 @@ a:focus{
     border: 2px solid #fff;
     background: inherit;
     margin: 0;
-    padding: 10px 40px;
+    top: 0;
 }
 
 .navbar-right .buttons:hover{
@@ -141,10 +142,15 @@ a:focus{
     color: white;
 }
 
+.dark-section .buttons{
+    padding: 15px 40px;
+}
+
 .buttons.reversed{
     border: 2px solid #FF5274;
     background-color: #FF5274;
     color: white;
+    margin-right: 20px;
 }
 
 .buttons.reversed:hover{
@@ -171,12 +177,13 @@ p{
     color: rgba(28, 54, 83, 0.6);
     font-size: 15px;
     line-height: 29px;
+    transition: all 200ms ease-in-out;
 }
 
 /*//WHITE SECTIONS//*/
 
 .white-section{
-    padding: 100px 10px;
+    padding: 135px 10px 115px 10px;
     overflow: hidden;
 }
 
@@ -223,7 +230,7 @@ p{
 
 .violet-section .single-article{
     border-bottom: solid 1px #E6E9EA;
-    margin: 25px 0;
+    margin: 35px 0;
 }
 
 .content-column>p{
@@ -237,8 +244,8 @@ p{
     top: 0;
 }
 
-.dark-section.two{
-    background-image: url(img/polygonal-bg.jpg);
+.white-section.two{
+     padding: 100px 10px 175px 10px;
 }
 
 h2{
@@ -247,7 +254,10 @@ h2{
 }
 
 .dark-section.two{
-    padding: 90px;
+    background-image: url(img/polygonal-bg.jpg);
+    padding-top: 90px;
+    padding-bottom: 15px;
+    margin-top: 100px;
 }
 
 .dark-section.two p{
@@ -263,6 +273,29 @@ h2{
     vertical-align: top;
     margin-left: -8px;
     font-style: normal;
+}
+
+.dark-section.two .diamond-wrapper{
+    position: relative;
+}
+
+.dark-section.two .diamond-wrapper img{
+    position: relative;
+    top: 80px;
+    animation: diamondSwing 1200ms linear infinite alternate;
+}
+
+@keyframes diamondSwing{
+    0%{
+        transform: translateY(0)
+    }
+    100%{
+        transform: translateY(10px)
+    }
+}
+
+.violet-section.two{
+    padding: 170px 10px 160px 10px;
 }
 
 .violet-section.two .single-article{
@@ -282,19 +315,95 @@ h2{
 
 .blog-item{
     padding: 10px;
+    margin-top: 65px;
 }
 
 .blog-item h6{
     color: #FF5274;
     padding-top: 30px;
+    cursor: pointer;
+}
+
+.blog-item p:hover{
+    color: #3D4351;
+    cursor: pointer;
+}
+
+.blog-item i{
+    padding-left: 10px;
+}
+
+.blog-item img{
+    transition: all 400ms ease-in-out;
+}
+
+.blog-item img:hover{
+    transform: scale(1.2);
+}
+
+.blog-item .modal-content{
+    position: relative;
+    top: 165px;
+    padding: 5px;
+    width: 520px;
+}
+
+.blog-item .modal-content .close{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: white;
+    background-color: black;
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    border: 3px solid;
+}
+
+.blog-item .modal-content .close span{
+    position: relative;
+    bottom: 3px;
+    font-size: 18px;
+}
+
+.blog-item .modal-content img:hover{
+    transform: none;
+}
+
+.articleimg-wrapper{
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+    position: relative;
+}
+
+.articleimg-wrapper i{
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    transition: all 400ms ease-in-out;    
+}
+
+.articleimg-wrapper:hover{
+    opacity: 0.5
+}
+
+.articleimg-wrapper:hover> i{
+    opacity: 1;
 }
 
 .dark-section.three{
     background-image: url(img/testimonials-bg.jpg);
+    padding: 115px 10px 125px 10px;
+    object-fit: cover;
 }
 
 .dark-section.three .single-slide p{
     color: white!important;
+    margin-top: 25px;
 }
 .dark-section.three .single-slide h4{
     color: white!important;
@@ -352,7 +461,7 @@ h2{
 }
 
 .slick-dots{
-    bottom: -100px;
+    bottom: -125px;
 }
 
 .slick-dots li button{
@@ -382,9 +491,9 @@ h2{
 .form input{
     display: block;
     padding: 10px 10px 10px 80px;
-    margin: 20px;
+    margin: 20px 0;
     border: solid 1px #E6E9EA;
-    width: 95%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -425,13 +534,12 @@ h2{
 }
 
 .form .buttons.reversed{
-    width: 95%;
+    width: 100%;
     border-radius: 0;
     padding: 10px;
     margin: 0;
+    top: 0;
 }
-
-
 
 /*//FOOTER SECTION//*/
 .footer{
@@ -476,18 +584,16 @@ h2{
 
 .nav-block .fa-heart{
     color: #FF5274;
-    animation: pulse 1s ease-in-out infinite;
+    
+    animation: pulse 1s linear infinite alternate;
 }
 
 @keyframes pulse{
     0%{
         transform: scale(1.1);
     }
-    50%{
-        transform: scale(0.8)
-    }
     100%{
-        transform: scale(1);
+        transform: scale(0.8);
     }
 }
 
