@@ -128,7 +128,7 @@ a:focus{
 /*//DARK SECTIONS//*/
 
 .dark-section{
-    padding: 280px 10px 140px 10px;
+    padding: 280px 10px 165px 10px;
 }
 
 .header-section .dark-section h1{
@@ -140,6 +140,30 @@ a:focus{
     padding-bottom: 70px;
     font-size: 1.3em;
     color: white;
+}
+
+.header-section .arrow-down{
+    color: white;
+}
+
+.header-section .fa-angle-down{
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    bottom: 25px;
+    cursor: pointer;
+    animation: floatingArrow 1s linear alternate infinite;
+    left: 50%;
+}
+
+@keyframes floatingArrow{
+    0%{
+        transform: translateY(0);
+    }
+    
+    100%{
+        transform: translateY(10px);
+    }
 }
 
 .dark-section .buttons{
@@ -208,16 +232,40 @@ p{
     overflow: hidden;
 }
 
-.img-container img:first-child{
+.img-container img{
     position: absolute;
-    right: 235px;
-    top: 35px;
 }
 
-.img-container img:last-child{
-    position: absolute;
+#ipad{
+    right: 235px;
+    top: 535px;
+}
+
+#iphone{
     right: 135px;
-    top: 260px
+    top: 760px;
+}
+
+.fade-in#ipad{
+    animation: imgsUp 1.5s ease-in-out forwards;
+}
+
+.fade-in#iphone{
+    animation: imgsUp 1.5s ease-in-out forwards 400ms;
+}
+
+
+
+@keyframes imgsUp{
+    0%{    
+        opacity: 0;
+        transform: translateY(0);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(-500px);        
+    }
 }
 
 .violet-section .articles-list{
@@ -239,9 +287,24 @@ p{
 
 /*//SINGLE ADJUSTMENTS//*/
 
-.white-section .img-container img{
-    left: 90px;
+#macbook{
+    left: 690px;
     top: 0;
+}
+
+.slide-in#macbook{
+    animation: imgsIn 1.5s ease-in-out forwards;
+}
+
+@keyframes imgsIn{
+    0%{    
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-600px);        
+    }
 }
 
 .white-section.two{
