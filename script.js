@@ -17,6 +17,7 @@ $(document).ready(function(){
     
     $("#burger-container").on('click', function(){
             $(this).toggleClass("open");
+            $('.menu-background').toggleClass("open");
         });
     
     $(window).scroll(function() {  

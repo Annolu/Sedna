@@ -88,6 +88,10 @@ p{
     display: inline-block;
 }
 
+.nav-main-container .logo{
+    padding: 65px 0;
+}
+
 .nav-main-container .right-buttons{
     right: 0;
     top: 65px;
@@ -99,9 +103,8 @@ p{
     border-bottom: none;
 }
 
-.nav-main-container .nav li{
-    float: left;
-    display: inline;
+.tabs{
+    display: inline-block;
     text-transform: uppercase;
     padding: 65px 20px;
     transition: all 200ms ease-in-out;
@@ -111,12 +114,15 @@ p{
     padding-left: 90px;
 }
 
+.menu-tabs ul{
+    margin-bottom: 0;
+}
 
 .nav-main-container.top-menu-down .right-buttons{
     top: 35px;
 }
 
-.nav-main-container.top-menu-down .nav li{
+.nav-main-container.top-menu-down .tabs{
     padding: 35px 20px;
 }
 
@@ -817,7 +823,7 @@ h2{
     color: white;
 }
 
-/*//Media queries//*/
+/*/////////////////////////////Media queries///////////////////////////////*/
 
 @media screen and (max-width: 1200px){
     #ipad{
@@ -840,13 +846,20 @@ h2{
         padding: 100px 10px 125px 10px;
     }
     
+    .menu-background.open{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+    }
+    
 }
 
 @media screen and (max-width: 990px){
     
     .show-burger{
         opacity: 1;
-            transition: all 200ms ease-in-out;    
+        transition: all 200ms ease-in-out;    
 
     }
     
@@ -854,8 +867,29 @@ h2{
         opacity: 0;
     }
     
-    .nav-main-container .nav{
+    .nav-main-container .tabs{
         opacity: 0;
+        transition: all 200ms ease-in-out;    
+    }
+    
+    .menu-background.open .tabs{
+        list-style-type: none;
+        display: block;
+        position: relative;
+        top: 56px;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 28px;
+        opacity: 1;
+    }
+    
+    .open .menu-tabs{
+        position: absolute;
+        width: 530px;
+    }
+    
+    .nav-main-container.top-menu-down .logo{
+        padding: 35px 0;
     }
     
     .nav-main-container.top-menu-down .show-burger{
@@ -870,7 +904,7 @@ h2{
         top: 85px;
     }
     
-       .fade-in#ipad{
+    .fade-in#ipad{
         animation: none;
     }
     
