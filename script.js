@@ -15,6 +15,10 @@ $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip()
     })
     
+    $("#burger-container").on('click', function(){
+            $(this).toggleClass("open");
+        });
+    
     $(window).scroll(function() {  
         
         //show/hide fixed top-menu
@@ -26,6 +30,14 @@ $(document).ready(function(){
         }else{
             $('.nav-main-container').removeClass('top-menu-down');
         }
+        
+        
+        if(distanceFromTop>1){
+            $('.menu-background').addClass('bg-blue');
+        }else{
+            $('.menu-background').removeClass('bg-blue');
+        }
+                
         /*
         switch (true){
             case distanceFromTop>850:
@@ -73,6 +85,18 @@ $(document).ready(function(){
                 behavior: 'smooth'
             }, 1200, 'swing');
         })*/
+        
+        $(window).resize(function() {
+            
+            
+            var windowWidth= $( window ).width();
+            
+            if (windowWidth<990){
+                $('.violet-section .content-column').addClass('flex-first');
+            }else{
+                $('.violet-section .content-column').removeClass('flex-first');
+            }
+        });        
     })
 });
    

@@ -16,27 +16,36 @@
     </head>
     <body>
         <section class="header-section">
-            <nav class="nav-main-container fixed-top" id="topMenu">
-                <div class="container">    
-                <div class="row align-items-center">
-                    <div class="logo col-md-1">
-                        <img src="img/sedna-logo.png">
-                    </div>
-                    <div class="col-md-7">
-                        <ul class="nav">
-                            <li class=""><a href="#">Features</a></li>
-                            <li class=""><a href="#">Assets</a></li>
-                            <li class=""><a href="#">Blog</a></li>
-                            <li class=""><a href="#">Download</a></li>
-                        </ul>
-                    </div>    
-                    <div class="navbar-right d-flex justify-content-end col-md-4">
-                        <a href="#" class="buttons log-in">Log-in</a>
-                        <a href="#" class="buttons sign-up">Sign up</a>
-                    </div>
-                </div>   
-            </div>
-            </nav>
+            <div class="fixed-top menu-background">
+                <nav class="nav-main-container fixed-top" id="topMenu">
+                        <div class="logo">
+                            <img src="img/sedna-logo.png">
+                        </div>
+                        <div class="">
+                            <ul class="nav">
+                                <li class=""><a href="#">Features</a></li>
+                                <li class=""><a href="#">Assets</a></li>
+                                <li class=""><a href="#">Blog</a></li>
+                                <li class=""><a href="#">Download</a></li>
+                            </ul>
+                        </div>    
+                        <div class="navbar-right right-buttons">
+                            <a href="#" class="buttons log-in">Log-in</a>
+                            <a href="#" class="buttons sign-up">Sign up</a>
+                        </div>
+                        <div class="burger-menu">              
+                            <div id="burger-container" class="show-burger">
+                                <div id="burger">
+                                    <a>
+                                       <span>&nbsp;</span>
+                                       <span>&nbsp;</span>
+                                       <span>&nbsp;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </nav>
+            </div>    
             <div class="container">
                 <div class="dark-section align-items-center">
                     <div class="row">
@@ -145,15 +154,17 @@
             </div>
         </section>
         <section class="dark-section two">
-            <div class="align-items-center">
-                <div class="banner-wrapper text-center">
-                    <h2>Customise Sedna with the included Sketch <i class="version">3</i> file</h2>
-                    <p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
-                    <a href="#" class="buttons">download now!</a>
-                    <div class="diamond-wrapper">
-                        <img src="img/sketch-logo.png">
+            <div class="container">
+                <div class="align-items-center">
+                    <div class="banner-wrapper text-center">
+                        <h2>Customise Sedna with the included Sketch <i class="version">3</i> file</h2>
+                        <p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
+                        <a href="#" class="buttons">download now!</a>
+                        <div class="diamond-wrapper">
+                            <img src="img/sketch-logo.png">
+                        </div>
                     </div>
-                </div>
+                </div> 
             </div>    
         </section>
         <section class="violet-section two">
@@ -170,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="blog-item col-lg-4 text-center">
                         <!-- Modal -->

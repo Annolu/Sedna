@@ -34,37 +34,6 @@ body{
     font-weight: 300;
 }
 
-.header-section{
-    background-image: url(img/hero.jpg);
-}
-
-.nav-main-container{
-    font-size: 13px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 400ms ease-in-out;
-}
-
-.nav-main-container.top-menu-down{
-    background-color: #232731;
-    border-bottom: none;
-}
-
-.nav-main-container .nav li{
-    float: left;
-    display: inline;
-    text-transform: uppercase;
-    padding: 65px 20px;
-    transition: all 200ms ease-in-out;
-}
-
-.nav-main-container .nav{
-    padding-left: 60px;
-}
-
-.nav-main-container.top-menu-down .nav li{
-    padding: 35px 20px;
-}
-
 a{
     transition: all 200ms ease-in-out;
     color: white;
@@ -83,6 +52,84 @@ a:focus{
 }
 
 
+h3{
+    color: #3D4351;
+    font-size: 24px;
+    padding-bottom: 14px;
+}
+
+h4{
+    color: #3D4351;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+p{
+    color: rgba(28, 54, 83, 0.6);
+    font-size: 15px;
+    line-height: 29px;
+    transition: all 200ms ease-in-out;
+}
+
+.header-section{
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+}
+
+.nav-main-container{
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 400ms ease-in-out;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nav-main-container>div{
+    display: inline-block;
+}
+
+.nav-main-container .right-buttons{
+    right: 0;
+    top: 65px;
+    position: absolute;
+    transition: all 200ms ease-in-out;
+}
+
+.nav-main-container.top-menu-down{
+    border-bottom: none;
+}
+
+.nav-main-container .nav li{
+    float: left;
+    display: inline;
+    text-transform: uppercase;
+    padding: 65px 20px;
+    transition: all 200ms ease-in-out;
+}
+
+.nav-main-container .nav{
+    padding-left: 90px;
+}
+
+
+.nav-main-container.top-menu-down .right-buttons{
+    top: 35px;
+}
+
+.nav-main-container.top-menu-down .nav li{
+    padding: 35px 20px;
+}
+
+.menu-background{
+    transition: all 200ms ease-in-out;
+}
+
+.menu-background.bg-blue{
+    display: inline-block;
+    height: 89px;
+    background: #232731;
+}
+
 .buttons{
     border: 2px solid #FF5274;
     color: #FF5274;
@@ -94,7 +141,6 @@ a:focus{
     font-size: 13px;
     padding: 8px 40px;    
     position: relative;
-    top: 30px;
 }
 
 .buttons:hover{
@@ -123,6 +169,48 @@ a:focus{
 .navbar-right .buttons.log-in{
     border: none;
     margin-right: 15px;
+}
+
+#burger {
+    cursor: pointer;
+    display: block;
+    height: 20px;
+}
+
+.show-burger{
+    position: absolute;
+    display: inline-block;
+    top: 60px;
+    right: 50px;
+    opacity: 0;
+    transition: all 200ms ease-in-out;    
+}
+
+#burger span {
+    background: white;
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 7px;
+    position: relative;
+    top: 0;
+    transition: all 400ms ease-in-out;
+}
+
+#burger-container.open span:nth-child(2){
+    width: 0;
+    opacity: 0;
+}
+
+#burger-container.open span:nth-child(3){
+    transform: rotate(45deg);
+    top: -7px;
+
+}
+
+#burger-container.open span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 15px;
 }
 
 /*//DARK SECTIONS//*/
@@ -182,27 +270,6 @@ a:focus{
     background-color: #D7405D;
 }
 
-/*//COMMON TO ALL OTHER SECTIONS//*/
-
-
-h3{
-    color: #3D4351;
-    font-size: 24px;
-    padding-bottom: 14px;
-}
-
-h4{
-    color: #3D4351;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-p{
-    color: rgba(28, 54, 83, 0.6);
-    font-size: 15px;
-    line-height: 29px;
-    transition: all 200ms ease-in-out;
-}
 
 /*//WHITE SECTIONS//*/
 
@@ -258,8 +325,6 @@ p{
 .fade-in#iphone{
     animation: imgsUp 1.5s ease-in-out forwards 400ms;
 }
-
-
 
 @keyframes imgsUp{
     0%{    
@@ -484,7 +549,7 @@ h2{
 .dark-section.three{
     background-image: url(img/testimonials-bg.jpg);
     padding: 115px 10px 125px 10px;
-    object-fit: cover;
+    background-size: cover;
 }
 
 .dark-section.three .single-slide p{
@@ -775,7 +840,37 @@ h2{
         padding: 100px 10px 125px 10px;
     }
     
-    .fade-in#ipad{
+}
+
+@media screen and (max-width: 990px){
+    
+    .show-burger{
+        opacity: 1;
+            transition: all 200ms ease-in-out;    
+
+    }
+    
+    .right-buttons{
+        opacity: 0;
+    }
+    
+    .nav-main-container .nav{
+        opacity: 0;
+    }
+    
+    .nav-main-container.top-menu-down .show-burger{
+        top: 35px;
+    }
+    
+    #ipad{
+        content: url("img/devices.png");
+        left: 0;
+        width: 100%;
+        position: relative;
+        top: 85px;
+    }
+    
+       .fade-in#ipad{
         animation: none;
     }
     
@@ -796,14 +891,6 @@ h2{
     
     .violet-section .img-container{
         top: 0;
-    }
-    
-    #ipad{
-        content: url("img/devices.png");
-        left: 0;
-        width: 100%;
-        position: relative;
-        top: 85px;
     }
     
     #iphone{
@@ -835,4 +922,7 @@ h2{
     }
     
     */
+    .container {
+        width: 750px;
+    }      
 }
