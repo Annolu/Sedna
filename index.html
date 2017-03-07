@@ -56,22 +56,22 @@
         <section class="white-section">
             <div class="container">
                 <div class="articles">
-                    <div class="row align-items-center">
-                        <div class="single-article col-md-4">
+                    <div class="row">
+                        <div class="single-article d-flex col-md-12 col-lg-4">
                             <div class="article-icon"><span class="icon-tools"></span></div>   
                             <div class="article-content">
                                 <h4>Easily customable</h4>
                                 <p>Easily customise Sedna to suit your start up, portfolio or product. Take advantage of the layered Sketch file and bring your product to life.</p>
                             </div>
                         </div>
-                        <div class="single-article col-md-4">
+                        <div class="single-article d-flex col-md-12 col-lg-4">
                             <div class="article-icon"><span class="icon-lightbulb"></span></div>
                             <div class="article-content">
                                 <h4>Moder design</h4>
                                 <p>Designed with modern trends and techniques in mind, Sedna will help your product stand out in an already saturated market.</p>
                             </div>
                         </div>
-                        <div class="single-article col-md-4">
+                        <div class="single-article d-flex col-md-12 col-lg-4">
                             <div class="article-icon"><span class="icon-genius"></span></div>
                             <div class="article-content">
                                 <h4>Responsive development</h4>
@@ -85,16 +85,17 @@
         <section class="violet-section">
             <div class="container">
                 <div class="row">
-                    <div class="img-container col-md-7">
+                    <div class="img-container col-md-12 col-lg-7">
                         <img id="ipad" src="img/ipad-device.png">
                         <img id="iphone" src="img/iphone6.png">
-                    </div>    
-                    <div class="content-column col-md-5">
+                    </div>
+                    <!--<div class="clear-fix"></div>-->
+                    <div class="content-column col-md-12 col-lg-5">  <!--flex-first -->
                         <h3>Sedna will drive your product forward</h3>
                         <p>Present your product, start up, or portfolio in a beautifully modern way. Turn your visitors in to clients.</p>
                         <div class="articles-list">
                             <ul>
-                                <div class="single-article">
+                                <div class="single-article d-flex">
                                     <div class="article-icon"><span class="icon-recycle"></span></div>
                                     <div class="article-content">
                                         <li>
@@ -103,7 +104,7 @@
                                         </li>
                                     </div>
                                 </div>
-                                <div class="single-article">
+                                <div class="single-article d-flex">
                                     <div class="article-icon"><span class="icon-profile-male"></span></div>
                                     <div class="article-content">
                                         <li>
@@ -112,7 +113,7 @@
                                         </li>
                                     </div>
                                 </div>
-                                <div class="single-article">
+                                <div class="single-article d-flex">
                                     <div class="article-icon"><span class="icon-beaker"></span></div>
                                     <div class="article-content">
 
@@ -131,13 +132,13 @@
         <section class="white-section two">
             <div class="container">
                 <div class="row">
-                    <div class="content-column col-md-5">
+                    <div class="content-column col-md-12 col-lg-5">
                         <h3>Designed with Sketch!</h3>
                         <p>Easily change/switch/swap every placeholder inside every image on Sedna with the included Sketch files. You’ll have this template customised to suit your business in no time! </p>
                         <p> Nam vehicula malesuada lectus, interdum fringilla nibh. Duis aliquam vitae metus a pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum augue quis augue ornare, eget faucibus felis pharetra. Proin condimentum et leo quis fringilla.</p>
                         <a href="#" class="buttons buttons sign-up">what's sketch</a>
                     </div>
-                    <div class="img-container col-md-7">
+                    <div class="img-container col-md-12 col-lg-7">
                         <img id="macbook" src="img/macbook-pro.png">
                     </div>
                 </div>    
@@ -159,11 +160,11 @@
             <div class="container">
                 <h3>Showcase your smashing product with Sedna</h3>
                 <div class="row">
-                    <div class="single-article col-md-6">
+                    <div class="single-article col-md-12 col-lg-6">
                         <h4>Exclusive to Codrops</h4>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
-                    <div class="single-article col-md-6">
+                    <div class="single-article col-md-12 col-lg-6">
                         <h4>Spreading pixels around the world</h4>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
@@ -187,7 +188,7 @@
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <img class="img-fluid" src="img/blog-img-01.jpg">
                         </div>
-                        <h6>Product</h6>
+                        <h6  data-toggle="tooltip" data-placement="top" title="Show more posts">Product</h6>
                         <p>Getting started with Sedna<i class="fa fa-angle-right" aria-hidden="true"></i></p>
                     </div>
                     <div class="blog-item col-lg-4 text-center">
@@ -275,8 +276,12 @@
         <section class="footer-section">
                 <div class="top-strip">
                     <div class="container d-flex justify-content-end">
-                        <div href="#topMenu" class="arrow-box">
-                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        <div class="row">
+                            <a href="#topMenu">
+                                <div class="arrow-box">
+                                    <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                </div>
+                            </a>
                         </div>
                     </div>    
                 </div>

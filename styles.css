@@ -194,7 +194,7 @@ h3{
 h4{
     color: #3D4351;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 p{
@@ -207,7 +207,7 @@ p{
 /*//WHITE SECTIONS//*/
 
 .white-section{
-    padding: 135px 10px 115px 10px;
+    padding: 135px 10px 65px 10px;
     overflow: hidden;
 }
 
@@ -216,12 +216,17 @@ p{
     font-size: 40px;
     display: inline-block;
     margin-right: 20px;
-    vertical-align: top;    
+    vertical-align: top;
+    width: 40px;
 }
 
 .article-content{
     display: inline-block;
     width: 80%;
+}
+
+.white-section .single-article{
+    padding-bottom: 50px;
 }
 
 /*//VIOLET SECTIONS//*/
@@ -274,6 +279,7 @@ p{
 
 .violet-section .articles-list ul{
     list-style-type: none;
+    padding: 0;
 }
 
 .violet-section .single-article{
@@ -286,6 +292,12 @@ p{
 }
 
 /*//SINGLE ADJUSTMENTS//*/
+
+.clear-fix {
+    clear: both;
+    content: '';
+    height: 0;
+}
 
 #macbook{
     left: 690px;
@@ -383,7 +395,7 @@ h2{
 
 .blog-item h6{
     color: #FF5274;
-    padding-top: 30px;
+    margin-top: 30px;
     cursor: pointer;
 }
 
@@ -406,10 +418,17 @@ h2{
 
 .blog-item .modal-content{
     position: relative;
-    top: 165px;
+    top: 130px;
     padding: 5px;
-    width: 520px;
+    max-width: 520px;
 }
+
+.tooltip.top .tooltip-inner{
+}
+/*
+.blog-item .tooltip{
+    color: aqua;
+}*/
 
 .blog-item .modal-content .close{
     position: absolute;
@@ -421,13 +440,14 @@ h2{
     width: 30px;
     height: 30px;
     border-radius: 25px;
-    border: 3px solid;
+    border: 2px solid;
 }
 
 .blog-item .modal-content .close span{
     position: relative;
-    bottom: 3px;
+    bottom: 4px;
     font-size: 18px;
+    font-weight: 300;
 }
 
 .blog-item .modal-content img:hover{
@@ -436,27 +456,30 @@ h2{
 
 .articleimg-wrapper{
     background-color: white;
+    display: inline-block;
     cursor: pointer;
     overflow: hidden;
     transition: all 400ms ease-in-out;
     position: relative;
+    color: transparent;
 }
 
 .articleimg-wrapper i{
-    opacity: 0;
     position: absolute;
     top: 25px;
-    right: 30px;
-    transition: all 400ms ease-in-out;    
+    right: 25px;
+    font-size: 23px;
+    z-index: 3;
 }
 
 .articleimg-wrapper:hover{
-    opacity: 0.5
+    opacity: 0.6;
+    color: white;
 }
-
-.articleimg-wrapper:hover> i{
+/*
+.articleimg-wrapper img:hover> i{
     opacity: 1;
-}
+}*/
 
 .dark-section.three{
     background-image: url(img/testimonials-bg.jpg);
@@ -727,4 +750,89 @@ h2{
 
 .social-block .social:hover > a{
     color: white;
+}
+
+/*//Media queries//*/
+
+@media screen and (max-width: 1200px){
+    #ipad{
+        top: 600px;
+    }
+    
+    #iphone{
+        top: 860px;
+    }
+    
+    .violet-section.two .single-article:first-child{
+        border-right: 0;
+    }
+    
+    .violet-section.two .single-article:last-child{
+        padding-left: 0;
+    }
+    
+    .white-section.two {
+        padding: 100px 10px 125px 10px;
+    }
+    
+    .fade-in#ipad{
+        animation: none;
+    }
+    
+    .fade-in#iphone{
+        animation: none;
+    }
+    
+    .slide-in#macbook{
+        animation: none;   
+    }
+    
+    .img-container{
+        animation: none;
+        position: relative;
+        top: 120px;
+        /*height: 400px*/
+    }
+    
+    .violet-section .img-container{
+        top: 0;
+    }
+    
+    #ipad{
+        content: url("img/devices.png");
+        left: 0;
+        width: 100%;
+        position: relative;
+        top: 85px;
+    }
+    
+    #iphone{
+        display: none
+    }
+    
+    #macbook{
+        height: 400px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    /*
+    #ipad{
+        left: 0;
+        width: 100%;
+        position: relative;
+        top: 40px;
+    }
+    
+    #iphone{
+        height: 400px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    */
 }

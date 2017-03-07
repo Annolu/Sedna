@@ -11,6 +11,9 @@ $(document).ready(function(){
        prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/back.svg"></button>'
     });
     
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
     
     $(window).scroll(function() {  
         
@@ -51,7 +54,17 @@ $(document).ready(function(){
         
             
         //smooth scroll to top when click on footer box-arrow
-            
+        
+        $('a[href^="#"]').on('click',function (e) {
+            e.preventDefault();
+
+            $('html, body').stop().animate({
+                'scrollTop': 1,
+                behavior: 'smooth'
+            }, 1200, 'swing');
+        })
+        
+        /*    
         $('.arrow-box').on('click',function (e) {
             e.preventDefault();
             
@@ -59,7 +72,7 @@ $(document).ready(function(){
                 'scrollTop': 1,
                 behavior: 'smooth'
             }, 1200, 'swing');
-        })
+        })*/
     })
 });
    
