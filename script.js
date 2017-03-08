@@ -20,16 +20,27 @@ $(document).ready(function(){
             $('.menu-background').toggleClass("open");
         });
     
-    $(window).resize(function() {
+    swapColumnOrder();
+    
+    $(window).resize(swapColumnOrder);
+        
+    //document.addEventListener('resize', swapColumnOrder)
+    
+    
+    function swapColumnOrder() {
 
         var windowWidth= $( window ).width();
+        
+        console.log(windowWidth);
 
         if (windowWidth<990){
             $('.violet-section .content-column').addClass('flex-first');
         }else{
             $('.violet-section .content-column').removeClass('flex-first');
         }
-    });
+    }
+    
+    
     
     $(window).scroll(function() {  
         
