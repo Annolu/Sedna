@@ -233,12 +233,12 @@ p{
 
 .header-section .dark-section h1{
     padding: 20px 0;
-    font-size: 4em;
+    font-size: 50px;
 }
 
 .header-section .dark-section p{
     padding-bottom: 70px;
-    font-size: 1.3em;
+    font-size: 20px;
     color: white;
 }
 
@@ -366,6 +366,10 @@ p{
 .violet-section .single-article{
     border-bottom: solid 1px #E6E9EA;
     margin: 35px 0;
+}
+
+.violet-section .single-article:last-child{
+    border-bottom: none;
 }
 
 .content-column>p{
@@ -502,6 +506,7 @@ h2{
     top: 130px;
     padding: 5px;
     max-width: 520px;
+    margin: 0 8px;    
 }
 
 .tooltip.top .tooltip-inner{
@@ -868,6 +873,19 @@ h2{
 
 @media screen and (max-width: 990px){
     
+    
+    .nav-main-container{
+        height: 110px;
+    }
+    
+    .nav-main-container .logo{
+        padding: 47px 0;
+    }
+    
+    .show-burger{
+        top: 45px;
+    }
+    
     .container {
         width: 750px;
     }
@@ -1097,7 +1115,17 @@ h2{
     
     .footer-section .nav-block p:nth-child(2){
         margin-top: 50px;
+        margin-bottom: 5px;
     }
+    
+    .footer-section .back-layer{
+            padding: 55px 20px 30px 20px;
+    }
+    
+    .container{
+        width: auto;
+    }
+}
     
 }
 
@@ -1125,4 +1153,48 @@ h2{
     .dark-section{
         padding: 230px 10px 85px 10px;
     }
+    
+    .img-container{
+        top: 85px;
+    }
+    
+    .dark-section.two{
+        margin-top: 50px;
+    }
+    
+    .dark-section.two buttons{
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .violet-section.two{
+        padding-bottom: 115px;
+    }
+    
+    .violet-section.two .single-article:first-child{
+        padding-right: 0;
+    }
+    
+    .violet-section.two .single-article:last-child{
+        margin-bottom: 100px;
+    }
+    
+    .violet-section.two .single-article{
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .blog-item{
+        margin-top: 0;
+    }
+    
+    .blog-item:last-child{
+        margin-bottom: 30px;
+    } 
+    
+    .blog-item h6{
+        margin-top: 15px;
+    }
+    
+    
 }

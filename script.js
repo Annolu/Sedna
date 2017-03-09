@@ -1,5 +1,7 @@
 $(document).ready(function(){
     
+    //slider
+    
     $('.slider').slick({
        dots: true,
        infinite: true,
@@ -11,28 +13,31 @@ $(document).ready(function(){
        prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/back.svg"></button>'
     });
     
+    
+    //tootip
+    
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
     
+    
     $("#burger-container").on('click', function(){
+        
+            //burger icon animation
+
             $(this).toggleClass("open");
+        
+            //top menu black layer on small/medium devices
+        
             $('.menu-background').toggleClass("open");
         });
-    
-    swapColumnOrder();
-    
-    $(window).resize(swapColumnOrder);
-        
-    //document.addEventListener('resize', swapColumnOrder)
-    
+       
+    //on medium/small devices, the sliding-in devices images are positioned under the text content
     
     function swapColumnOrder() {
 
         var windowWidth= $( window ).width();
         
-        console.log(windowWidth);
-
         if (windowWidth<990){
             $('.violet-section .content-column').addClass('flex-first');
         }else{
@@ -40,6 +45,9 @@ $(document).ready(function(){
         }
     }
     
+    swapColumnOrder();
+    
+    $(window).resize(swapColumnOrder);
     
     
     $(window).scroll(function() {  
@@ -53,6 +61,8 @@ $(document).ready(function(){
         }else{
             $('.nav-main-container').removeClass('top-menu-down');
         }
+        
+        //topmenu background turns darker on scroll
         
         
         if(distanceFromTop>1){
@@ -73,6 +83,8 @@ $(document).ready(function(){
                 $('#macbook').addClass('slide-in');
                 break;
         }*/
+        
+        //img devices slide in 
                 
         if(distanceFromTop>800){
             $('#ipad').addClass('fade-in');            
@@ -86,7 +98,6 @@ $(document).ready(function(){
             $('#macbook').addClass('slide-in');
         }
         
-        
             
         //smooth scroll to top when click on footer box-arrow
         
@@ -97,18 +108,7 @@ $(document).ready(function(){
                 'scrollTop': 1,
                 behavior: 'smooth'
             }, 1200, 'swing');
-        })
-        
-        /*    
-        $('.arrow-box').on('click',function (e) {
-            e.preventDefault();
-            
-            $('body').animate({
-                'scrollTop': 1,
-                behavior: 'smooth'
-            }, 1200, 'swing');
-        })*/
-                
+        })                
     })
 });
    
