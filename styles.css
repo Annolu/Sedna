@@ -325,6 +325,10 @@ p{
     top: 535px;
 }
 
+    #devices{
+        display: none;
+    }
+
 #iphone{
     right: 135px;
     top: 760px;
@@ -973,7 +977,19 @@ h2{
         top: 35px;
     }
     
+    .violet-section{
+        padding-bottom: 0;
+    }
+    
+    #devices{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    
     #ipad{
+        display: none;
         content: url("img/devices.png");
         left: 0;
         width: 100%;
