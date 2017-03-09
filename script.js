@@ -9,8 +9,8 @@ $(document).ready(function(){
        slidesToShow: 1,
        cssEase: 'ease',
        adaptiveHeight: true,
-       nextArrow: '<button type="button" class="arrow arrow-next"><img src="img/next.svg"></button>',
-       prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/back.svg"></button>'
+       nextArrow: '<button type="button" class="arrows arrow-next"><img src="img/next.svg"></button>',
+       prevArrow: '<button type="button" class="arrows arrow-prev"><img src="img/back.svg"></button>'
     });
     
     
@@ -29,7 +29,7 @@ $(document).ready(function(){
         
             //top menu black layer on small/medium devices
         
-            $('.menu-background').toggleClass("open");
+            $('.black-layer').toggleClass("open");
         });
        
     //on medium/small devices, the sliding-in devices images are positioned under the text content
@@ -57,18 +57,18 @@ $(document).ready(function(){
         let distanceFromTop= $(this).scrollTop();
                 
         if(distanceFromTop>1){
-            $('.nav-main-container').addClass('top-menu-down');
+            $('.nav-main-container').addClass('topmenu-fixed');
         }else{
-            $('.nav-main-container').removeClass('top-menu-down');
+            $('.nav-main-container').removeClass('topmenu-fixed');
         }
         
         //topmenu background turns darker on scroll
         
         
         if(distanceFromTop>1){
-            $('.menu-background').addClass('bg-blue');
+            $('.black-layer').addClass('bg-blue');
         }else{
-            $('.menu-background').removeClass('bg-blue');
+            $('.black-layer').removeClass('bg-blue');
         }
                 
         /*
