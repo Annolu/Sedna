@@ -30,6 +30,7 @@ $(document).ready(function(){
             //top menu black layer on small/medium devices
         
             $('.black-layer').toggleClass("open");
+        $('.movidas').toggleClass("open");
         });
        
     //on medium/small devices, the sliding-in devices images are positioned under the text content
@@ -66,9 +67,9 @@ $(document).ready(function(){
         
         
         if(distanceFromTop>1){
-            $('.black-layer').addClass('bg-blue');
+            $('.top-nav-back').addClass('bg-blue');
         }else{
-            $('.black-layer').removeClass('bg-blue');
+            $('.top-nav-back').removeClass('bg-blue');
         }
                 
         /*
