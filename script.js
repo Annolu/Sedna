@@ -53,23 +53,18 @@ $(document).ready(function(){
     
     $(window).scroll(function() {  
         
-        //show/hide fixed top-menu
-
         let distanceFromTop= $(this).scrollTop();
-                
+        
         if(distanceFromTop>1){
             $('.nav-main-container').addClass('topmenu-fixed');
-        }else{
-            $('.nav-main-container').removeClass('topmenu-fixed');
-        }
-        
-        //topmenu background turns darker on scroll
-        
-        
-        if(distanceFromTop>1){
             $('.top-nav-back').addClass('bg-blue');
+            $('.logo').addClass('logo_open');
+            $('.burger-container').addClass('burger-container_open');
         }else{
+             $('.nav-main-container').removeClass('topmenu-fixed');
             $('.top-nav-back').removeClass('bg-blue');
+            $('.logo').removeClass('logo_open');
+            $('.burger-container').removeClass('burger-container_open');
         }
                 
         /*

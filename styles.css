@@ -69,16 +69,21 @@ p{
 }
 
 .logo{
-    padding: 65px 0 0 15px;
+    padding: 65px 0 0 6%;
     transition: all 200ms ease-in-out;
     position: fixed;
 }
+.logo_open{
+    padding-top: 35px;
+}
+
+
 .movidas{
     z-index: 9001;
     position: fixed;
     width: 90%;
 }
-.nav-main-container.topmenu-fixed .logo{
+.topmenu-fixed .logo{
     padding: 35px 0;
 }
 
@@ -103,6 +108,12 @@ p{
 .nav-main-container .nav{
     padding-left: 90px;
 }
+
+
+.menu-tabs{
+    padding-left: 120px;
+}
+
 /*
 .nav-main-container .menu-tabs ul{
     margin-bottom: 0;
@@ -125,7 +136,7 @@ p{
 .black-layer.open {
     z-index:9000;
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .bg-blue{
@@ -217,7 +228,7 @@ p{
 }
 
 .dark-section{
-    padding: 280px 10px 165px 10px;
+    padding: 120px 10px 165px 10px;
 }
 
 .header-section .dark-section p{
@@ -748,9 +759,13 @@ p{
 }
 
 .footer-section .navigation-tabs{
+
+    padding: 25px 30px 55px 0 !important;
+    display: inline-block;
     text-transform: uppercase;
+    font-weight: 300;
     font-size: 13px;
-    padding: 25px 30px 55px 0;
+    
 }
 
 .footer-section .navigation-tabs:first-child{
@@ -808,8 +823,10 @@ p{
 }
 
 .top-nav-back{
-       display: inline-block;
+    display: inline-block;
     height: 89px;
+    transition: all 200ms ease-in-out;
+    
 }
 
 /*////////////////////////////////MEDIA QUERIES//////////////////////////////////*/
@@ -835,30 +852,36 @@ p{
     }
     
     .nav-main-container{
-        height: 110px;
+        width: 100%;
     }
-
+/*
     .logo{
         padding: 47px 0;
         position: absolute;        
     }
     
-       
+       */
       
     .burger-container{
-        top: 45px;        
+        top: 65px;        
         opacity: 1;
         transition: all 200ms ease-in-out;
-            position: fixed;
-    z-index: 999999;
+        position: fixed;
+        right: 6%;
+        z-index: 999999;
     }
     
-   
+    .burger-container_open{
+        top: 32px;
+    }
+    
+    .menu-tabs{
+        padding-left: 0;
+    }
    
     
     .movidas{
         width: 100%;
-        
         top: -385px;
     }  
     
@@ -992,7 +1015,9 @@ p{
         display: block;
         font-size: 13px;
         border-bottom: dashed 1px #4E566C;
-        padding: 25px 20px 25px 0;
+        padding: 25px 20px 25px 0 !important;
+        text-align: left;
+        font-weight: 300;
     }    
     
     .footer-section .nav-block{
@@ -1019,11 +1044,21 @@ p{
 
 @media screen and (max-width: 580px){
     
-    .dark-section{
-        padding: 160px 10px 85px 10px;
+    
+    .nav-main-container{
+        height: 90px
     }
     
-    .dark-section .buttons {
+    .dark-section{
+        padding: 50px 10px 85px 10px;
+    }
+    
+    .logo{
+        padding-top: 35px;
+    }
+    
+    
+    .buttons-wrapper .buttons {
         padding: 15px 40px;
         display: block;
         margin: 20px auto 0;
@@ -1040,6 +1075,10 @@ p{
         
     .img-container{
         top: 85px;
+    }
+    
+    .burger-container{
+        top: 35px;
     }
     
     .dark-section.two{
