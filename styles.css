@@ -11,7 +11,6 @@ a{
     cursor: pointer;
 }
 
-
 a:hover{
     color: #FF5274;
     text-decoration: none;
@@ -56,8 +55,19 @@ p{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000;
+    background-color: #fff;
     z-index: 999999;
+}
+
+.spinner {
+   top: 300px;
+   position: relative;
+   display: block;
+   margin: auto;
+   padding: 0;
+   width: 100px;
+   height: 15px;
+   text-align: center;
 }
 
 .spinner i {
@@ -67,9 +77,9 @@ p{
   width: 5px;
   height: 15px;
   border-radius: 2px;
-  border: solid #690;
+  border: solid #666;
   border-width: 0 1px 1px 0;
-  background: #ddd;
+  background: #333;
   animation: tilt infinite 5s cubic-bezier(0.955, -0.010, 1.000, 1.000);
   transform-origin: 100% 100%;
 }
@@ -141,21 +151,15 @@ p{
   70% { transform: rotate(0deg); width: 5px; height: 5px;opacity: 0;}
 }
 
-.spinner {
-  top: 300px;
-  position: relative;
-  display: block;
-  margin: auto;
-  padding: 0;
-  width: 100px;
-  height: 15px;
-  text-align: center;
-}
-
-
 .header-section{
     background-image: url(img/hero.jpg);
     background-size: cover;
+}
+
+.top-nav-back{
+    display: inline-block;
+    height: 89px;
+    transition: all 200ms ease-in-out;
 }
 
 .nav-main-container{
@@ -172,16 +176,16 @@ p{
 }
 
 .logo{
-    padding: 65px 0 0 6%;
+    padding: 60px 0 0 6%;
     transition: all 200ms ease-in-out;
     position: fixed;
 }
+
 .logo_open{
     padding-top: 35px;
 }
 
-
-.movidas{
+.nav-menu{
     z-index: 9001;
     position: fixed;
     width: 90%;
@@ -190,43 +194,22 @@ p{
     padding: 35px 0;
 }
 
-.nav-main-container .right-buttons{
-    right: 0;
-    top: 65px;
-    position: absolute;
-    transition: all 200ms ease-in-out;
-}
-
 .nav-main-container.topmenu-fixed{
     border-bottom: none;
 }
 
-.navigation-tabs{
+.menu-tabs{
+    padding-left: 120px;
+}
+
+.navigation-tab{
     display: inline-block;
     text-transform: uppercase;
     padding: 65px 15px;
     transition: all 200ms ease-in-out;
 }
 
-.nav-main-container .nav{
-    padding-left: 90px;
-}
-
-
-.menu-tabs{
-    padding-left: 120px;
-}
-
-/*
-.nav-main-container .menu-tabs ul{
-    margin-bottom: 0;
-}*/
-
-.nav-main-container.topmenu-fixed .right-buttons{
-    top: 35px;
-}
-
-.nav-main-container.topmenu-fixed .navigation-tabs{
+.nav-main-container.topmenu-fixed .navigation-tab{
     padding: 35px 15px;
 }
 
@@ -271,7 +254,7 @@ p{
     outline: none;
 }
 
-.navbar-right .buttons{
+.right-buttons .buttons{
     color: white;
     border: 2px solid #fff;
     background: inherit;
@@ -279,14 +262,25 @@ p{
     top: 0;
 }
 
-.navbar-right .buttons:hover{
+.right-buttons .buttons:hover{
     border: 2px solid #FF5274;
     color: #D7405D;
 }
 
-.navbar-right .buttons.log-in{
+.right-buttons .buttons.log-in{
     border: none;
     margin-right: 15px;
+}
+
+.nav-menu .right-buttons{
+    right: 0;
+    top: 65px;
+    position: absolute;
+    transition: all 200ms ease-in-out;
+}
+
+.nav-main-container.topmenu-fixed .right-buttons{
+    top: 35px;
 }
 
 .burger {
@@ -445,10 +439,6 @@ p{
         opacity: 1;
     }
 }
-/*
-.violet-section .articles-list{
-    padding-right: 45px;
-}*/
 
 .violet-section .articles-list ul{
     list-style-type: none;
@@ -476,14 +466,10 @@ p{
     margin-bottom: 40px;
 }
 
-.white-section.two .macbook{
-    left: 690px;
-    top: 0;
-}
-
 .macbook{
+    top: 0;    
     height: 400px;
-    left: 0;
+    left: 690px;
     width: 920px;
     height: 540px;    
     position: relative;
@@ -571,30 +557,30 @@ p{
     margin-top: 65px;
 }
 
-.violet-section.two .blog-item h6{
+.blog-item h6{
     color: #FF5274;
     margin-top: 30px;
     cursor: pointer;
 }
 
-.violet-section.two .blog-item p:hover{
+.blog-item p:hover{
     color: #3D4351;
     cursor: pointer;
 }
 
-.violet-section.two .blog-item i{
+.blog-item i{
     padding-left: 10px;
 }
 
-.violet-section.two .blog-item img{
+.blog-item img{
     transition: all 400ms ease-in-out;
 }
 
-.violet-section.two .blog-item img:hover{
+.blog-item img:hover{
     transform: scale(1.2);
 }
 
-.violet-section.two .blog-item .modal-content{
+.blog-item .modal-content{
     position: relative;
     top: 130px;
     padding: 5px;
@@ -602,7 +588,7 @@ p{
     margin: 0 8px;    
 }
 
-.violet-section.two .blog-item .close{
+.blog-item .close{
     position: absolute;
     top: -15px;
     right: -15px;
@@ -615,7 +601,7 @@ p{
     border: 2px solid;
 }
 
-.violet-section.two .blog-item .close span{
+.blog-item .close span{
     position: relative;
     bottom: 4px;
     font-size: 18px;
@@ -636,7 +622,7 @@ p{
     color: transparent;
 }
 
-.blog-item .articleimg-wrapper i{
+.articleimg-wrapper i{
     position: absolute;
     top: 25px;
     right: 25px;
@@ -644,7 +630,7 @@ p{
     z-index: 3;
 }
 
-.blog-item .articleimg-wrapper:hover{
+.articleimg-wrapper:hover{
     opacity: 0.6;
     color: white;
 }
@@ -659,11 +645,6 @@ p{
     color: white!important;
     margin-top: 25px;
 }
-
-/*
-.dark-section.three .single-slide h4{
-    color: white!important;
-}*/
 
 .dark-section.three .single-slide img{
     display: inline;
@@ -792,15 +773,11 @@ p{
     margin: 0;
     top: 0;
 }
-/*
-.footer{
-    position: relative;
-}*/
 
 .footer-section .top-strip{
     background-color: #495061;
 }
-.footer-section .top-strip .arrow-box{
+.top-strip .arrow-box{
     height: 50px;
     width: 60px;
     background-color: rgba(0, 0, 0, 0.15);
@@ -809,11 +786,11 @@ p{
     transition: all 200ms ease-in-out;
 }
 
-.footer-section .top-strip .arrow-box:hover{
+.top-strip .arrow-box:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.footer-section .top-strip .fa-angle-up{
+.top-strip .fa-angle-up{
     color: white;
     font-size: 27px;
     position: relative;
@@ -867,7 +844,7 @@ p{
     padding-left: 0;
 }
 
-.footer-section .navigation-tabs{
+.footer-section .navigation-tab{
 
     padding: 25px 30px 55px 0 !important;
     display: inline-block;
@@ -877,7 +854,7 @@ p{
     
 }
 
-.footer-section .navigation-tabs:first-child{
+.footer-section .navigation-tab:first-child{
     padding: 25px 20px 55px 0px;    
 }
 
@@ -895,7 +872,7 @@ p{
     padding: 135px 0 0 50px;
 }
 
-.social-block .social a{
+.social a{
     height: 60px;
     width: 60px;
     background-color: #1AB4EF;
@@ -906,36 +883,29 @@ p{
     margin-right: 20px;
 }
 
-.social-block .social:hover > a{
+.social:hover > a{
     color: white;
 }
 
-.social-block .social i{
+.social i{
     top: 15px;
     position: relative;
 }
 
-.social-block .social .twitter{
+.social .twitter{
     background-color: #1AB4EF;
 }
 
-.social-block .social .twitter:hover{
+.social .twitter:hover{
     background-color: #1590BF;
 }
 
-.social-block .social .facebook{
+.social .facebook{
     background-color: #3B5898;
 }
 
-.social-block .social .facebook:hover{
+.social .facebook:hover{
     background-color: #324C85;
-}
-
-.top-nav-back{
-    display: inline-block;
-    height: 89px;
-    transition: all 200ms ease-in-out;
-    
 }
 
 /*////////////////////////////////MEDIA QUERIES//////////////////////////////////*/
@@ -956,20 +926,17 @@ p{
 
 @media screen and (max-width: 990px){
     
-    .footer-section .container {
-        width: 750px;
+    .fixed-position{
+        overflow: hidden;
     }
     
     .nav-main-container{
         width: 100%;
     }
-/*
-    .logo{
-        padding: 47px 0;
-        position: absolute;        
-    }
     
-       */
+    .right-buttons .buttons.log-in{
+        margin-right: 0;
+    }
       
     .burger-container{
         top: 65px;        
@@ -977,7 +944,7 @@ p{
         transition: all 200ms ease-in-out;
         position: fixed;
         right: 6%;
-        z-index: 999999;
+        z-index: 9001;
     }
     
     .burger-container_open{
@@ -988,13 +955,12 @@ p{
         padding-left: 0;
     }
    
-    
-    .movidas{
+    .nav-menu{
         width: 100%;
         top: -385px;
     }  
     
-    .movidas.open{
+    .nav-menu.open{
         animation: menuDown 400ms ease-in-out forwards; 
     }     
     
@@ -1010,33 +976,30 @@ p{
         }
     }
     
-    .navigation-tabs{
+    .navigation-tab{
         list-style-type: none;
         display: block;
         position: relative;
         text-align: center;
         padding: 15px 0 !important;
         font-size: 25px;
-        opacity: 0;
         font-weight: 600;
+        opacity: 1;    
     }  
-    
-    .navigation-tabs{
-        opacity: 1;
-    }
         
     .menu-tabs ul{
         padding-left: 0;
     }
       
     .right-buttons{
-        opacity: 0;
         display: block;
         position: absolute;
         top: -250px !important;
         width: 100%;
         text-align: center;
         font-weight: 600;
+        opacity: 1;
+        animation: menuDown 400ms ease-in-out forwards;        
     }  
     
     .right-buttons a:first-child{
@@ -1045,12 +1008,7 @@ p{
         margin-right: 0;
         font-size: 25px;        
     }
-    
-    .right-buttons{
-        opacity: 1;
-        animation: menuDown 400ms ease-in-out forwards;         
-    }
-    
+        
     .violet-section{
         padding-bottom: 0;
     }
@@ -1065,11 +1023,11 @@ p{
         padding: 20px 20px 0 20px;
     }
 
-    .violet-section .ipad{
+    .ipad{
         display: none;
     }
     
-    .violet-section .iphone{
+    .iphone{
         display: none;
     }
     
@@ -1081,7 +1039,7 @@ p{
         position: relative;
     }
     
-    .white-section.two .macbook{
+   .macbook{
         left: 0;
         width: 100%;
         height: 100%;        
@@ -1112,11 +1070,12 @@ p{
         top: 0;
     }
     
+    .footer-section .container {
+        width: 750px;
+    }
+    
     .footer-section .social-block{
         display: none;
-    }
-    .fixedPosition{
-        overflow: hidden;
     }
 }
 
@@ -1127,10 +1086,8 @@ p{
 }
 
 @media screen and (max-width: 640px){
-
     
-    
-    .footer-section .navigation-tabs{    
+    .footer-section .navigation-tab{    
         text-transform: uppercase;
         display: block;
         font-size: 13px;
@@ -1144,7 +1101,7 @@ p{
         border-top: none;
     }
     
-    .footer-section .navigation-tabs:first-child{
+    .footer-section .navigation-tab:first-child{
         padding: 20px 0 20px 0;
     }
     
@@ -1168,13 +1125,10 @@ p{
     .nav-main-container{
         height: 90px
     }
-    
 
-    
     .logo{
         padding-top: 35px;
     }
-    
     
     .buttons-wrapper .buttons {
         padding: 15px 40px;

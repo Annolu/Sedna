@@ -30,7 +30,7 @@ $(document).ready(function(){
             //top menu black layer on small/medium devices
         
             $('.black-layer').toggleClass("open");
-            $('.movidas').toggleClass("open");
+            $('.nav-menu').toggleClass("open");
             blockBackgroundScroll();
 
     });
@@ -39,9 +39,9 @@ $(document).ready(function(){
     
     function blockBackgroundScroll(){
         if($('.black-layer').hasClass('open')){
-            $('body').addClass("fixedPosition");
+            $('body').addClass("fixed-position");
         }else{
-            $('body').removeClass("fixedPosition");
+            $('body').removeClass("fixed-position");
         }
     }
     
