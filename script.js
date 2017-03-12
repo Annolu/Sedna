@@ -13,7 +13,6 @@ $(document).ready(function(){
        prevArrow: '<button type="button" class="arrows arrow-prev"><img src="img/back.svg"></button>'
     });
     
-    
     //tootip
     
     $(function () {
@@ -23,21 +22,22 @@ $(document).ready(function(){
     
     $("#burger-container").on('click', function(){
         
-            //burger icon animation
+        //burger icon animation
 
-            $(this).toggleClass("open");
-        
-            //top menu black layer on small/medium devices
-        
-            $('.black-layer').toggleClass("open");
-            $('.nav-menu').toggleClass("open");
-            blockBackgroundScroll();
+        $(this).toggleClass("open");
+
+        //top menu black layer on small/medium devices
+
+        $('.black-layer').toggleClass("open");
+        $('.nav-menu').toggleClass("open");
+        blockBackgroundScroll();
 
     });
     
     //no body scroll when black layer is visible
     
     function blockBackgroundScroll(){
+        
         if($('.black-layer').hasClass('open')){
             $('body').addClass("fixed-position");
         }else{
@@ -45,7 +45,6 @@ $(document).ready(function(){
         }
     }
     
-       
     //columns order swap - on medium/small devices, the sliding-in devices images are positioned under the text content
     
     function swapColumnOrder() {
@@ -85,7 +84,6 @@ $(document).ready(function(){
             $('.burger-container').removeClass('burger-container_open');
         }
         
-        
         var whiteSection= $('.white-section')[0];
         var violetSection= $('.violet-section')[0];
         
@@ -93,7 +91,7 @@ $(document).ready(function(){
         var iphoneFadeInPoint= ipadFadeInPoint + 200;        
         var macbookFadeInPoint= violetSection.offsetHeight + violetSection.clientHeight/2;
         
-        //img devices slide in 
+        //img devices slide-in 
         
         if(distanceFromTop>ipadFadeInPoint){
             $('#ipad').addClass('fade-in');            
@@ -106,14 +104,13 @@ $(document).ready(function(){
         if(distanceFromTop>macbookFadeInPoint){
             $('#macbook').addClass('slide-in');
         }
-        
             
         //smooth scroll to top when click on footer box-arrow
         
         $('a[href^="#"]').on('click',function (e) {
             e.preventDefault();
 
-            $('html, body').stop().animate({
+            $('body').stop().animate({
                 'scrollTop': 1,
                 behavior: 'smooth'
             }, 1200, 'swing');

@@ -28,6 +28,7 @@ h1{
 
 h2{
     font-size: 40px;
+    font-weight: 300;    
 }
 
 h3{
@@ -1092,7 +1093,7 @@ p{
         display: block;
         font-size: 13px;
         border-bottom: dashed 1px #4E566C;
-        padding: 25px 20px 25px 0 !important;
+        padding: 20px 20px 20px 0 !important;
         text-align: left;
         font-weight: 300;
     }    
@@ -1144,6 +1145,10 @@ p{
     .header-section .dark-section h1{
         font-size: 50px;
     }
+    
+    .header-section .dark-section p{
+        padding-bottom: 40px;
+    }
         
     .img-container{
         top: 85px;
@@ -1162,8 +1167,12 @@ p{
         margin: 0 auto;
     }
     
+    .white-section{
+        padding: 100px 10px 0px 10px;
+    }
+    
     .violet-section.two{
-        padding-bottom: 115px;
+        padding: 125px 10px 115px 10px;
     }
     
     .violet-section .articles-list ul{
@@ -1175,7 +1184,7 @@ p{
     }
     
     .violet-section.two .single-article:last-child{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     
     .violet-section.two .single-article{
