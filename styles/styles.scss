@@ -18,8 +18,14 @@ a{
   transition: all 200ms ease-in-out;
   color: white;
   cursor: pointer;
-  &:hover, &:focus{
+  &:hover{
     color: $main-brand-colour;
+    text-decoration: none;
+
+  }
+  &:focus{
+    outline: none;
+    color: white;
     text-decoration: none;
   }
 }
@@ -53,7 +59,7 @@ p{
   transition: all 200ms ease-in-out;
 }
 
-.fixed-position{
+.no-scroll{
   overflow: hidden;
 }
 
@@ -204,8 +210,11 @@ p{
 
 .top-nav-back{
   display: inline-block;
-  height: 89px;
+  height: 90px;
   transition: all 200ms ease-in-out;
+  &.bg-blue{
+    background: $brand-colour-dark;
+  }
 }
 
 .nav-main-container{
@@ -220,11 +229,21 @@ p{
   }
 }
 
+.topmenu-fixed{
+  border-bottom: transparent;
+  .navigation-tab{
+    padding: 35px 15px;
+  }
+  .right-buttons{
+    top: 35px;
+  }
+}
+
 .logo{
   padding: 60px 0 0 6%;
   transition: all 200ms ease-in-out;
   position: fixed;
-  &.logo_open{
+  &.logo-up{
     padding-top: 35px;
   }
 }
@@ -233,16 +252,6 @@ p{
   z-index: 9001;
   position: fixed;
   width: 90%;
-}
-
-.topmenu-fixed{
-  border-bottom: none;
-  .navigation-tab{
-    padding: 35px 15px;
-  }
-  .right-buttons{
-    top: 35px;
-  }
 }
 
 .menu-tabs{
@@ -268,12 +277,6 @@ p{
     opacity: 0.9;
     visibility: visible;
   }
-}
-
-.bg-blue{
-  display: inline-block;
-  height: 89px;
-  background: $brand-colour-dark;
 }
 
 .buttons{
@@ -408,7 +411,7 @@ p{
     right: 135px;
     top: 760px;
     opacity: 0;
-    &.iphone{
+    &.fade-in{
       animation: imgsUp 1s ease-in-out forwards 400ms;
     }
   }
@@ -469,7 +472,7 @@ p{
   }
   100%{
     opacity: 1;
-    transform: translateX(-600px);
+    transform: translateX(-650px);
   }
 }
 
@@ -658,11 +661,12 @@ p{
       &:hover{
         opacity: 1;
       }
+      &:focus{
+        outline: none;
+      }
     }
   }
-  &:focus{
-    outline: none;
-  }
+
 }
 
 .slick-dots{
@@ -702,8 +706,10 @@ p{
 }
 
 .white-section{
-  .three{
-    padding: 135px 10px 115px 10px;
+  &.two{
+    p{
+      margin: 25px 0;
+    }
   }
   .form{
     position: relative;
@@ -738,12 +744,14 @@ p{
     top: 80px;
     font-size: 18px;
   }
-  .buttons.reversed{
-    width: 100%;
-    border-radius: 0;
-    padding: 10px;
-    margin: 0;
-    top: 0;
+  .buttons{
+    &.reversed{
+      width: 100%;
+      border-radius: 0;
+      padding: 10px;
+      margin: 0;
+      top: 0;
+    }
   }
 }
 
@@ -815,16 +823,16 @@ p{
   }
   .navigation-tab{
     padding: 25px 30px 55px 0;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 300;
+    // display: inline-block;
+    // text-transform: uppercase;
+    // font-weight: 300;
     font-size: 13px;
   }
-  .nav-block{
-    p{
-      font-size: 13px;
-    }
-  }
+  // .nav-block{
+  //   p{
+  //     font-size: 13px;
+  //   }
+  // }
   .social-block{
     p{
       color: white;
@@ -917,7 +925,7 @@ p{
     position: fixed;
     right: 6%;
     z-index: 9001;
-    &.burger-open{
+    &.burger-up{
       top: 35px;
     }
   }
@@ -925,14 +933,14 @@ p{
   .menu-tabs{
     padding-left: 0;
     .navigation-tab{
-      list-style-type: none;
+      // list-style-type: none;
       display: block;
       position: relative;
       text-align: center;
       padding: 15px 0;
       font-size: 25px;
       font-weight: 600;
-      opacity: 1;
+      // opacity: 1;
     }
   }
 
@@ -963,7 +971,6 @@ p{
     .devices{
       display: block;
       width: 100%;
-      padding: 20px 20px 0 20px;
     }
     &.two{
       padding-bottom: 60px;
@@ -978,7 +985,7 @@ p{
     }
     &.two{
       .img-container{
-        padding-top: 65px;
+        padding: 65px 0 0 0;
       }
     }
   }
@@ -995,30 +1002,29 @@ p{
         animation: none;
        }
     }
-    .ipad{
-      display: none;
-    }
-    .iphone{
+    .ipad, .iphone{
       display: none;
     }
   }
 
-  .dark-section.three .slider:hover > .arrows.arrow-prev,
-  .dark-section.three .slider:hover > .arrows.arrow-next{
-    display: none !important;
+  .slider{
+    &:hover{
+      .arrows{
+        display: none !important;
+      }
+    }
   }
 
   .violet-section{
     &.two{
       .single-article{
-
         &:first-child{
           border-right: 0;
           padding-right: 0;
           margin-bottom: 0;
         }
         &:last-child{
-            padding-left: 15px;
+          padding-left: 15px;
         }
       }
     }

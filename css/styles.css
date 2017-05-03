@@ -14,8 +14,12 @@ a {
   transition: all 200ms ease-in-out;
   color: white;
   cursor: pointer; }
-  a:hover, a:focus {
+  a:hover {
     color: #FF5274;
+    text-decoration: none; }
+  a:focus {
+    outline: none;
+    color: white;
     text-decoration: none; }
 
 h1 {
@@ -42,7 +46,7 @@ p {
   line-height: 29px;
   transition: all 200ms ease-in-out; }
 
-.fixed-position {
+.no-scroll {
   overflow: hidden; }
 
 .spinner-wrapper {
@@ -194,8 +198,10 @@ p {
 
 .top-nav-back {
   display: inline-block;
-  height: 89px;
+  height: 90px;
   transition: all 200ms ease-in-out; }
+  .top-nav-back.bg-blue {
+    background: #232731; }
 
 .nav-main-container {
   font-size: 13px;
@@ -207,24 +213,24 @@ p {
   .nav-main-container > div {
     display: inline-block; }
 
+.topmenu-fixed {
+  border-bottom: transparent; }
+  .topmenu-fixed .navigation-tab {
+    padding: 35px 15px; }
+  .topmenu-fixed .right-buttons {
+    top: 35px; }
+
 .logo {
   padding: 60px 0 0 6%;
   transition: all 200ms ease-in-out;
   position: fixed; }
-  .logo.logo_open {
+  .logo.logo-up {
     padding-top: 35px; }
 
 .nav-menu {
   z-index: 9001;
   position: fixed;
   width: 90%; }
-
-.topmenu-fixed {
-  border-bottom: none; }
-  .topmenu-fixed .navigation-tab {
-    padding: 35px 15px; }
-  .topmenu-fixed .right-buttons {
-    top: 35px; }
 
 .menu-tabs {
   padding-left: 120px; }
@@ -246,11 +252,6 @@ p {
     background-color: black;
     opacity: 0.9;
     visibility: visible; }
-
-.bg-blue {
-  display: inline-block;
-  height: 89px;
-  background: #232731; }
 
 .buttons {
   border: 2px solid #FF5274;
@@ -354,7 +355,7 @@ p {
   right: 135px;
   top: 760px;
   opacity: 0; }
-  .img-container .iphone.iphone {
+  .img-container .iphone.fade-in {
     animation: imgsUp 1s ease-in-out forwards 400ms; }
 .img-container .devices {
   display: none; }
@@ -394,7 +395,7 @@ p {
     transform: translateY(0); }
   100% {
     opacity: 1;
-    transform: translateX(-600px); } }
+    transform: translateX(-650px); } }
 .dark-section.two {
   background-image: url(../img/polygonal-bg.jpg);
   padding-top: 90px;
@@ -527,8 +528,8 @@ p {
     transform: translateX(17px); }
   .slider:hover .arrows:hover {
     opacity: 1; }
-.slider:focus {
-  outline: none; }
+  .slider:hover .arrows:focus {
+    outline: none; }
 
 .slick-dots {
   bottom: -125px; }
@@ -550,8 +551,8 @@ p {
     border: 2px solid white;
     background-color: transparent; }
 
-.white-section .three {
-  padding: 135px 10px 115px 10px; }
+.white-section.two p {
+  margin: 25px 0; }
 .white-section .form {
   position: relative; }
   .white-section .form input {
@@ -633,11 +634,6 @@ p {
     padding-left: 0; }
 .footer-section .navigation-tab {
   padding: 25px 30px 55px 0;
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 13px; }
-.footer-section .nav-block p {
   font-size: 13px; }
 .footer-section .social-block p {
   color: white;
@@ -702,20 +698,18 @@ p {
     position: fixed;
     right: 6%;
     z-index: 9001; }
-    .burger-container.burger-open {
+    .burger-container.burger-up {
       top: 35px; }
 
   .menu-tabs {
     padding-left: 0; }
     .menu-tabs .navigation-tab {
-      list-style-type: none;
       display: block;
       position: relative;
       text-align: center;
       padding: 15px 0;
       font-size: 25px;
-      font-weight: 600;
-      opacity: 1; }
+      font-weight: 600; }
 
   .nav-menu {
     width: 100%;
@@ -737,15 +731,14 @@ p {
       padding-right: 0; }
     .violet-section .devices {
       display: block;
-      width: 100%;
-      padding: 20px 20px 0 20px; }
+      width: 100%; }
     .violet-section.two {
       padding-bottom: 60px; }
 
   .white-section .single-article:not(:nth-child(3)) {
     padding-bottom: 50px; }
   .white-section.two .img-container {
-    padding-top: 65px; }
+    padding: 65px 0 0 0; }
 
   .img-container img {
     position: relative; }
@@ -755,13 +748,10 @@ p {
     height: 100%; }
     .img-container .macbook.slide-in {
       animation: none; }
-  .img-container .ipad {
-    display: none; }
-  .img-container .iphone {
+  .img-container .ipad, .img-container .iphone {
     display: none; }
 
-  .dark-section.three .slider:hover > .arrows.arrow-prev,
-  .dark-section.three .slider:hover > .arrows.arrow-next {
+  .slider:hover .arrows {
     display: none !important; }
 
   .violet-section.two .single-article:first-child {

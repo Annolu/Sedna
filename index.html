@@ -13,33 +13,22 @@
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://use.fontawesome.com/8253c6c8c6.js"></script>
-        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script>
-            $(window).load(function(){
-                preloaderFadeOutTime= 500;
-                function hidePreloader(){
-                    var preloader= $('.spinner-wrapper');
-                    preloader.fadeOut(preloaderFadeOutTime)
-                }
-                hidePreloader();
-            })
-        </script>
     </head>
     <body>
-        <div class="spinner-wrapper">
+        <div class="spinner-wrapper" id="spinnerWrapper">
             <div class="spinner">
             <i></i><i></i><i></i><i></i><i></i>
             </div>
         </div>
         <section class="header-section">
-            <div class="top-nav-back fixed-top ">
-                <div class="logo">
+            <div class="top-nav-back fixed-top" id="topNavBack">
+                <div class="logo" id="logo">
                     <img src="img/sedna-logo.png">
                 </div>
             </div>
-            <div class="black-layer"></div>
+            <div class="black-layer" id="blackLayer"></div>
             <nav class="nav-main-container" id="topMenu">
-                <div class="nav-menu">
+                <div class="nav-menu" id="navMenu">
                     <div class="menu-tabs">
                         <ul>
                             <li class="navigation-tab"><a href="#">Features</a></li>
@@ -55,7 +44,7 @@
                 </div>
             </nav>
             <div class="burger-menu">
-                <div id="burger-container" class="burger-container">
+                <div id="burgerContainer" class="burger-container">
                     <div id="burger" class="burger">
                         <a>
                            <span>&nbsp;</span>
@@ -81,8 +70,7 @@
                 <a class="arrow-down" href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             </div>
         </section>
-
-        <section class="white-section">
+        <section class="white-section" id="whiteSection">
             <div class="container">
                 <div class="articles">
                     <div class="row">
@@ -111,8 +99,7 @@
                 </div>
             </div>
         </section>
-
-        <section class="violet-section">
+        <section class="violet-section" id="violetSection">
             <div class="container">
                 <div class="row">
                     <div class="img-container col-md-12 col-lg-7">
@@ -159,7 +146,6 @@
                 </div>
             </div>
         </section>
-
         <section class="white-section two">
             <div class="container">
                 <div class="row">
@@ -175,7 +161,6 @@
                 </div>
             </div>
         </section>
-
         <section class="dark-section two">
             <div class="container">
                 <div class="align-items-center">
@@ -190,7 +175,6 @@
                 </div>
             </div>
         </section>
-
         <section class="violet-section two">
             <div class="container">
                 <h3>Showcase your smashing product with Sedna</h3>
@@ -267,7 +251,6 @@
                 </div>
             </div>
         </section>
-
         <section class="dark-section three">
             <div class="container">
                 <div class="slider text-center">
@@ -306,7 +289,6 @@
                 </div>
             </div>
         </section>
-
         <section class="footer-section">
                 <div class="top-strip">
                     <div class="container d-flex justify-content-end">
@@ -347,6 +329,7 @@
                 </div>
         </section>
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
