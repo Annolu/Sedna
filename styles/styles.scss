@@ -386,7 +386,7 @@ p{
   display: inline-block;
   margin-right: 20px;
   vertical-align: top;
-  width: 40px;
+  width: 60px;
 }
 
 .violet-section{
@@ -788,7 +788,7 @@ p{
   }
   .fa-heart{
     color: $main-brand-colour;
-    animation: pulse 1s linear infinite alternate;
+    animation: pulse .8s ease-out infinite alternate;
   }
 }
 
@@ -823,16 +823,8 @@ p{
   }
   .navigation-tab{
     padding: 25px 30px 55px 0;
-    // display: inline-block;
-    // text-transform: uppercase;
-    // font-weight: 300;
     font-size: 13px;
   }
-  // .nav-block{
-  //   p{
-  //     font-size: 13px;
-  //   }
-  // }
   .social-block{
     p{
       color: white;
@@ -933,14 +925,12 @@ p{
   .menu-tabs{
     padding-left: 0;
     .navigation-tab{
-      // list-style-type: none;
       display: block;
       position: relative;
       text-align: center;
       padding: 15px 0;
       font-size: 25px;
       font-weight: 600;
-      // opacity: 1;
     }
   }
 
@@ -1098,6 +1088,10 @@ p{
     }
   }
 
+  .burger-container{
+    top: 35px;
+  }
+
   .header-section{
     .fa-angle-down{
       display: none;
@@ -1108,10 +1102,6 @@ p{
     p{
       padding-bottom: 40px;
     }
-  }
-
-  .burger-container{
-    top: 35px;
   }
 
   .white-section{

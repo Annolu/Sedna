@@ -1,9 +1,8 @@
 $(document).ready(function(){
 
-  preloaderFadeOutTime= 500;
   function hidePreloader(){
       var preloader= $('#spinnerWrapper');
-      preloader.fadeOut(preloaderFadeOutTime)
+      preloader.fadeOut(500)
   }
   hidePreloader();
 
@@ -24,13 +23,6 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  $('.navigation-tab').on('click', function(){
-    closeMenu();
-  });
-
-  $('.right-buttons').on('click', function(){
-    closeMenu();
-  });
 
   $("#burgerContainer").on('click', function(){
 
@@ -42,6 +34,11 @@ $(document).ready(function(){
     $('#navMenu').toggleClass("open");
     //no body scroll when black layer is visible
     $('body').toggleClass("no-scroll");
+
+    //close menu when click on it
+    $('#blackLayer, .navigation-tab, .right-buttons').on('click', function(e){
+      closeMenu();
+    });
   });
 
   //columns order swap - on medium/small devices, the sliding-in devices images are positioned under the text content
@@ -54,7 +51,6 @@ $(document).ready(function(){
       $('.violet-section .content-column').addClass('flex-first');
     }else{
       $('.violet-section .content-column').removeClass('flex-first');
-
       //on large devices, the black top menu if open it diseappears
     closeMenu();
     }
@@ -70,7 +66,7 @@ $(document).ready(function(){
   $(window).resize(swapColumnOrder);
 
   $(window).scroll(function() {
-    let distanceFromTop= $(this).scrollTop();
+    var distanceFromTop= $(this).scrollTop();
 
     //fixed topmenu when scroll down
     if(distanceFromTop>20){
@@ -104,16 +100,16 @@ $(document).ready(function(){
     if(distanceFromTop>macbookFadeInPoint){
       $('#macbook').addClass('slide-in');
     }
+  })
 
-    //smooth scroll to top when click on footer box-arrow
+  //smooth scroll to top when click on footer box-arrow
 
-    $('a[href^="#"]').on('click',function (e) {
-      e.preventDefault();
+  $('a[href^="#topMenu"]').on('click',function (e) {
+    e.preventDefault();
 
-      $('html,body').stop().animate({
-          'scrollTop': 1,
-          behavior: 'smooth'
-      }, 1200, 'swing');
-    })
+    $('html,body').stop().animate({
+        'scrollTop': 1,
+        behavior: 'smooth'
+    }, 1000, 'swing');
   })
 });

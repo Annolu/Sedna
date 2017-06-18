@@ -336,7 +336,7 @@ p {
   display: inline-block;
   margin-right: 20px;
   vertical-align: top;
-  width: 40px; }
+  width: 60px; }
 
 .violet-section {
   padding: 120px 10px 85px 10px;
@@ -610,7 +610,7 @@ p {
   font-size: 13px; }
 .footer-section .fa-heart {
   color: #FF5274;
-  animation: pulse 1s linear infinite alternate; }
+  animation: pulse .8s ease-out infinite alternate; }
 
 @keyframes pulse {
   0% {
@@ -801,15 +801,15 @@ p {
     margin: 20px auto 0;
     width: 80%; }
 
+  .burger-container {
+    top: 35px; }
+
   .header-section .fa-angle-down {
     display: none; }
   .header-section h1 {
     font-size: 50px; }
   .header-section p {
     padding-bottom: 40px; }
-
-  .burger-container {
-    top: 35px; }
 
   .white-section {
     padding: 80px 10px 75px 10px; }
