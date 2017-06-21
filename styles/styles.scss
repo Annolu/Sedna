@@ -71,10 +71,13 @@ p{
   bottom: 0;
   background-color: #fff;
   z-index: 999999;
+  display: -webkit-flex;
+  -webkit-align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .spinner {
-  top: 300px;
   position: relative;
   display: block;
   margin: auto;
@@ -82,6 +85,7 @@ p{
   width: 100px;
   height: 15px;
   text-align: center;
+  align-self: center;
   i {
     position: relative;
     display: inline-block;
@@ -166,6 +170,7 @@ p{
 .header-section{
   background-image: url(../img/hero.jpg);
   background-size: cover;
+  height: 100%;
 }
 
 .burger-container{
@@ -338,13 +343,14 @@ p{
 }
 
 .dark-section{
-  padding: 120px 10px 165px 10px;
+  // padding: 120px 10px 165px 10px;
+  padding-top: 6%;
 }
 
 .header-section{
   .fa-angle-down{
     font-size: 28px;
-    position: relative;
+    position: absolute;
     display: inline-block;
     bottom: 25px;
     cursor: pointer;
@@ -530,6 +536,16 @@ p{
   }
 }
 
+// .modal{
+//   display: -webkit-flex;
+//   -webkit-align-items: flex-start;
+//   display: flex;
+//   align-items: flex-start;
+//   .modal-dialog{
+//     align-self: center;
+//   }
+// }
+
 .blog-item{
   padding: 10px;
   h6{
@@ -554,10 +570,9 @@ p{
   }
   .modal-content{
     position: relative;
-    top: 130px;
+    margin-top: 32%;
     padding: 5px;
     max-width: 520px;
-    margin: 0 8px;
   }
   .close{
     position: absolute;
@@ -870,6 +885,15 @@ p{
 
 /*////////////////////////////////MEDIA QUERIES//////////////////////////////////*/
 
+@media screen and (min-width: 1290px){
+  .header-section{
+    .container{
+      padding-top: 8%;
+    }
+  }
+}
+
+
 @media screen and (max-width: 1200px){
   .violet-section{
     .ipad{
@@ -1030,11 +1054,11 @@ p{
   }
 }
 
-@media screen and (max-width: 768px){
-  .dark-section{
-    padding: 50px 10px 85px 10px;
-  }
-}
+// @media screen and (max-width: 768px){
+//   .dark-section{
+//     padding: 50px 10px 85px 10px;
+//   }
+// }
 
 @media screen and (max-width: 640px){
 
