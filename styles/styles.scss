@@ -63,6 +63,10 @@ p{
   overflow: hidden;
 }
 
+.fixed-top{
+  z-index: 3;
+}
+
 .spinner-wrapper{
   position: fixed;
   top: 0;
@@ -171,6 +175,7 @@ p{
   background-image: url(../img/hero.jpg);
   background-size: cover;
   height: 100%;
+  min-height: 600px;
 }
 
 .burger-container{
@@ -254,7 +259,7 @@ p{
 }
 
 .nav-menu{
-  z-index: 9001;
+  z-index: 4;
   position: fixed;
   width: 90%;
 }
@@ -343,19 +348,21 @@ p{
 }
 
 .dark-section{
-  // padding: 120px 10px 165px 10px;
   padding-top: 6%;
 }
 
 .header-section{
+  position: relative;
+  .arrow-down{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+  }
   .fa-angle-down{
     font-size: 28px;
-    position: absolute;
-    display: inline-block;
-    bottom: 25px;
     cursor: pointer;
     animation: floatingArrow 1s linear alternate infinite;
-    left: 50%;
     color: white;
   }
   p{
@@ -940,7 +947,7 @@ p{
     transition: all 200ms ease-in-out;
     position: fixed;
     right: 6%;
-    z-index: 9001;
+    z-index: 3;
     &.burger-up{
       top: 35px;
     }
@@ -1054,12 +1061,6 @@ p{
   }
 }
 
-// @media screen and (max-width: 768px){
-//   .dark-section{
-//     padding: 50px 10px 85px 10px;
-//   }
-// }
-
 @media screen and (max-width: 640px){
 
   .footer-section{
@@ -1095,12 +1096,16 @@ p{
 
 @media screen and (max-width: 580px){
 
+  .top-nav-back{
+    height: 65px;
+  }
+
   .nav-main-container{
-    height: 90px
+    height: 65px
   }
 
   .logo{
-    padding-top: 35px;
+    padding-top: 22px !important;
   }
 
   .buttons-wrapper{
@@ -1113,19 +1118,32 @@ p{
   }
 
   .burger-container{
-    top: 35px;
+    top: 22px !important;
   }
 
   .header-section{
+    min-height: 515px;
+
     .fa-angle-down{
       display: none;
     }
     h1{
-      font-size: 50px;
+      font-size: 45px;
     }
     p{
-      padding-bottom: 40px;
+      padding-bottom: 15px;
+      font-size: 16px;
     }
+  }
+
+  .blog-item{
+    .modal-content{
+      margin-top: 48%;
+    }
+  }
+
+  .modal-dialog{
+    margin: 17px;
   }
 
   .white-section{
