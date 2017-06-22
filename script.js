@@ -1,10 +1,6 @@
 $(document).ready(function(){
 
-  function hidePreloader(){
-      var preloader= $('#spinnerWrapper');
-      preloader.fadeOut(500)
-  }
-  hidePreloader();
+  setTimeout(hidePreloader, 700);
 
   //slider
   $('.slider').slick({
@@ -112,4 +108,10 @@ $(document).ready(function(){
         behavior: 'smooth'
     }, 1000, 'swing');
   })
+
+  function hidePreloader(){
+    $('body').removeClass('no-scroll');
+      var preloader= $('#spinnerWrapper');
+      preloader.fadeOut(400)
+  }
 });
