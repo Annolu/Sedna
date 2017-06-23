@@ -255,7 +255,7 @@ p {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 9000;
+  z-index: 3;
   visibility: hidden; }
   .black-layer.open {
     background-color: black;
@@ -734,7 +734,8 @@ p {
     .nav-menu.open {
       transform: translateY(110px);
       opacity: 1;
-      visibility: visible; }
+      visibility: visible;
+      z-index: 9999; }
 
   .menu-tabs ul {
     padding-left: 0; }

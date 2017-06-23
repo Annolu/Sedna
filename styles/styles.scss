@@ -280,7 +280,7 @@ p{
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index:9000;
+  z-index: 3;
   visibility: hidden;
   &.open {
     background-color: black;
@@ -975,13 +975,14 @@ p{
       transform: translateY(110px);
       opacity: 1;
       visibility: visible;
+      z-index: 9999;
     }
   }
 
   .menu-tabs{
     ul{
-     padding-left: 0;
-   }
+      padding-left: 0;
+    }
   }
 
   .violet-section{
